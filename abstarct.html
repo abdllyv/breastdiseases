@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/scss/main.css" />
+  </head>
+  <body>
+    <main>
+      <section class="abstract">
+        <div class="abstract-container">
+          <form action="" id="abstract-form">
+            <h3 class="abstract-title">Məlumatlarınızı qeyd edin</h3>
+            <div class="info-area">
+              <div class="form-group">
+                <label for="name"> Abstraktın əsas adı*</label>
+                <input type="text" name="name" id="name" autocomplete="on" />
+                <div id="name-error" class="error-message"></div>
+              </div>
+              <div class="form-group">
+                <div class="select-label">Abstraktın kateqoriyası*</div>
+                <div class="select">
+                  <span
+                    onclick="openSelect(event, 'category')"
+                    class="select-title"
+                    ><span class="text" id="select-first-text">Seç</span>
+                    <div class="icon">
+                      <svg
+                        width="17"
+                        height="9"
+                        viewBox="0 0 17 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15.3785 1.62158L9.37031 7.62973C8.92701 8.07303 8.20828 8.07303 7.76499 7.62973L1.75684 1.62158"
+                          stroke="#414141"
+                          stroke-width="1.7027"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+                  <ul class="select-list" id="category">
+                    <li class="select-item">Qeyri-tibb işçilər</li>
+                    <li class="select-item">-tibb işçilər</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="select-label">Abstrakt əsas mövzusu</div>
+                <div class="select">
+                  <span
+                    onclick="openSelect(event, 'mainTheme')"
+                    class="select-title"
+                    ><span class="text" id="select-second-text">Seç</span>
+                    <div class="icon">
+                      <svg
+                        width="17"
+                        height="9"
+                        viewBox="0 0 17 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15.3785 1.62158L9.37031 7.62973C8.92701 8.07303 8.20828 8.07303 7.76499 7.62973L1.75684 1.62158"
+                          stroke="#414141"
+                          stroke-width="1.7027"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+                  <ul class="select-list" id="mainTheme">
+                    <li class="select-item">Qeyri-tibb işçilər</li>
+                    <li class="select-item">-tibb işçilər</li>
+                    <li class="select-item">Qeyri-tibb işçilər</li>
+                    <li class="select-item">Qeyri-tibb</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="info-area">
+              <div class="form-group">
+                <div class="select-label">Abstraktın altmövzusu</div>
+                <div class="select">
+                  <span
+                    onclick="openSelect(event, 'subtopic')"
+                    class="select-title"
+                    ><span class="text" id="select-third-text">Seç</span>
+                    <div class="icon">
+                      <svg
+                        width="17"
+                        height="9"
+                        viewBox="0 0 17 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15.3785 1.62158L9.37031 7.62973C8.92701 8.07303 8.20828 8.07303 7.76499 7.62973L1.75684 1.62158"
+                          stroke="#414141"
+                          stroke-width="1.7027"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+                  <ul class="select-list" id="subtopic">
+                    <li class="select-item">Qeyri-tibb işçilər</li>
+                    <li class="select-item">-tibb işçilər</li>
+                    <li class="select-item">Qeyri-tibb işçilər</li>
+                    <li class="select-item">Qeyri-tibb</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="select-label">Abstraktın növü</div>
+
+                <div class="select">
+                  <span
+                    onclick="openSelect(event, 'typeAbstract')"
+                    class="select-title"
+                    ><span class="text" id="select-fourth-text">Seç</span>
+                    <div class="icon">
+                      <svg
+                        width="17"
+                        height="9"
+                        viewBox="0 0 17 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15.3785 1.62158L9.37031 7.62973C8.92701 8.07303 8.20828 8.07303 7.76499 7.62973L1.75684 1.62158"
+                          stroke="#414141"
+                          stroke-width="1.7027"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+                  <ul class="select-list" id="typeAbstract">
+                    <li class="select-item">Qeyri-tibb işçilər</li>
+                    <li class="select-item">-tibb işçilər</li>
+                    <li class="select-item">Qeyri-tibb işçilər</li>
+                    <li class="select-item">Qeyri-tibb</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="info-area">
+              <div class="form-group checkbox-area">
+                <label for="checkbox-live"> İştirak növü</label>
+                <div class="inp-area">
+                  <span class="check-title">Canlı iştirak</span>
+                  <input type="checkbox" name="checkbox" id="checkbox-live" />
+                </div>
+              </div>
+              <div class="form-group checkbox-area">
+                <label for="checkbox-virtual"> İştirak növü</label>
+                <div class="inp-area">
+                  <span class="check-title">Virtual iştirak</span>
+                  <input
+                    type="checkbox"
+                    name="checkbox"
+                    id="checkbox-virtual"
+                  />
+                </div>
+              </div>
+            </div>
+            <h3 class="abstract-title">Məlumatlarınızı qeyd edin</h3>
+            <div class="info-area">
+              <div class="form-group">
+                <label for="personal-name"> Ad*</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="personal-name"
+                  autocomplete="on"
+                />
+                <div id="personal-name-error" class="error-message"></div>
+              </div>
+              <div class="form-group">
+                <label for="personal-surname"> Soyad adı*</label>
+                <input type="text" name="surname" id="personal-surname" />
+                <div id="personal-surname-error" class="error-message"></div>
+              </div>
+              <div class="form-group">
+                <label for="father-name">Ata Adı*</label>
+                <input type="text" name="father-name" id="father-name" />
+                <div id="father-name-error" class="error-message"></div>
+              </div>
+            </div>
+            <div class="info-area">
+              <div class="form-group">
+                <label for="country"> Ölkə*</label>
+                <input
+                  type="text"
+                  name="country"
+                  id="country"
+                  autocomplete="on"
+                />
+                <div id="country-error" class="error-message"></div>
+              </div>
+              <div class="form-group">
+                <label for="town"> Şəhər*</label>
+                <input type="text" name="town" id="town" />
+                <div id="town-error" class="error-message"></div>
+              </div>
+              <div class="form-group">
+                <label for="email"> E-Poçt ünvanı*</label>
+                <input type="email" name="email" id="email" autocomplete="on" />
+                <div id="email-error" class="error-message"></div>
+              </div>
+            </div>
+            <div class="info-area">
+              <div class="form-group">
+                <label for="company-name"> Təmsil etdiyiniz müəssisə*</label>
+                <input type="text" name="company-name" id="company-name" />
+                <div id="company-name-error" class="error-message"></div>
+              </div>
+            </div>
+            <div class="info-area">
+              <div class="form-group text-area">
+                <label for="summary"> Xülasə</label>
+                <textarea name="summary" id="summary" maxlength="100" rows="5"></textarea>
+                <span class="size"
+                  ><span class="resize"></span>|
+                  <span class="max-size">100</span>
+                </span>
+              </div>
+              <div class="form-group text-area">
+                <label for="methods"> Metodlar</label>
+                <textarea
+                  name="methods"
+                  id="methods"
+                  maxlength="200"
+                  rows="5"
+                ></textarea>
+                <span class="size"
+                  ><span class="resize"></span>|<span class="max-size"
+                    >200</span
+                  ></span
+                >
+              </div>
+            </div>
+            <div class="info-area">
+              <div class="form-group text-area">
+                <label for="results"> Nəticələr</label>
+                <textarea name="results" id="results" maxlength="300"  rows="5"></textarea>
+                <span class="size"
+                  ><span class="resize"></span>|<span class="max-size"
+                    >300</span
+                  ></span
+                >
+              </div>
+              <div class="form-group text-area">
+                <label for="discussion"> Müzakirə</label>
+                <textarea name="discussion" id="discussion"  maxlength="300" rows="5"></textarea>
+                <span class="size"
+                  ><span class="resize"></span>|<span class="max-size"
+                    >300</span
+                  ></span
+                >
+              </div>
+            </div>
+            <div class="info-area">
+              <div class="form-group-img">
+                <label for="file-input-1"> Şəkil/Diagram#1*</label>
+
+                <label class="file-label" for="file-input-1">Faylı seçin</label>
+                <input type="file" id="file-input-1" name="file-input" />
+                <label id="file-input-label" class="inp-text" for="file-input-1"
+                  >Seçili fayl yoxdur</label
+                >
+              </div>
+              <div class="form-group-img">
+                <label for="file-input-2"> Diagram#1*</label>
+
+                <label class="file-label" for="file-input-2"
+                  >Word faylını seçin</label
+                >
+                <input type="file" id="file-input-2" name="file-input" />
+                <label id="file-input-label" class="inp-text" for="file-input-2"
+                  >Seçili fayl yoxdur
+                </label>
+              </div>
+              <div class="form-group-img">
+                <label for="file-input-3"> Şəkil/Diagram#1*</label>
+
+                <label class="file-label" for="file-input-3">Faylı seçin</label>
+                <input type="file" id="file-input-3" name="file-input" />
+                <label id="file-input-label" class="inp-text" for="file-input-3"
+                  >Seçili fayl yoxdur</label
+                >
+              </div>
+            </div>
+            <div class="info-area">
+              <div class="form-group">
+                <label for="key-word-first"> Açar söz (max. 2 söz)</label>
+                <input type="text" name="key-word-first" id="key-word-first" />
+                <div id="key-word-first-error" class="error-message"></div>
+              </div>
+              <div class="form-group">
+                <label for="key-word-second"> Açar söz (max. 2 söz)</label>
+                <input type="text" name="key-word-first" id="key-word-second" />
+                <div id="key-word-second-error" class="error-message"></div>
+              </div>
+              <div class="form-group">
+                <label for="key-word-third"> Açar söz (max. 2 söz)</label>
+                <input type="text" name="key-word-third" id="key-word-third" />
+                <div id="key-word-third-error" class="error-message"></div>
+              </div>
+            </div>
+            <div class="info-area">
+              <div class="form-group checkbox-area specific-style-first">
+                <div class="inp-area">
+                  <label for="first-text" class="check-title"
+                    >Tədqiqata görə qonorar almışam
+                  </label>
+                  <input type="checkbox" id="first-text" />
+                </div>
+              </div>
+            </div>
+            <div class="info-area">
+              <div class="form-group checkbox-area specific-style-second">
+                <div class="inp-area">
+                  <label for="second-text" class="check-title"
+                    >Tədqiqata görə qrant və ya maliyyə mükafatı almışam
+                  </label>
+                  <input type="checkbox" id="second-text" />
+                </div>
+              </div>
+            </div>
+            <div class="info-area">
+              <div class="form-group checkbox-area specific-style-third">
+                <div class="inp-area">
+                  <label for="third-text" class="check-title"
+                    >Tibbi cihaz və ya dərman şirkətlərinin səhmlərinə malikəm
+                  </label>
+                  <input type="checkbox" id="third-text" />
+                </div>
+              </div>
+            </div>
+            <div class="btn-area">
+              <button class="btn">Göndər</button>
+            </div>
+          </form>
+        </div>
+        <div class="overlay"></div>
+      </section>
+    </main>
+      <!-- SweetAlert -->
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <!-- SweetAlert -->
+
+      <!-- My JS -->
+      <script src="./assets/js/abstract.js"></script>
+      <!-- My JS -->
+  </body>
+</html>

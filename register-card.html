@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/scss/main.css" />
+  </head>
+  <body>
+    <main>
+      <section class="register-card">
+        <div class="register-pocket-container">
+          <h4 class="register-title">
+            Azərbaycan Respublikası Səhiyyə Nazirliyi, Azərbaycan Tibb
+            Universiteti, Milli Onkologiya Mərkəzi , Azərbaycan Tibb
+            Universitetinin Onkoloji Klinikası ilə 27-28 oktyabr 2023-ci il
+            tarixində Bakı şəhəri Hilton oteldə "II Beynəlxalq Bakı Süd Vəzisi
+            Xərçəngi Konqresi keçiriləcəkdir. Süd vəzisi xərçənginin
+            profilaktikası, diaqnostikası və müalicəsi üzrə Azərbaycanın aparıcı
+            mütəxəssisləri ilə yanaşı Konqresdə
+          </h4>
+          <div class="card-box">
+            <div class="register-card-area">
+              <div class="top">
+                <img
+                  src="./assets/img/WhatsApp Image 2023-08-24 at 14.51 1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="bottom">
+                <h4 class="title">
+                  II BEYNƏLXALQ SÜD VƏZİSİ XƏRÇƏNGİ KONQRESİ
+                </h4>
+                <div class="time">
+                  <span class="date">27-28 oktyabr 2023 </span> /
+                  <span class="hour"> 09:00</span>
+                </div>
+                <div class="location">
+                  <span class="country">Bakı </span>|
+                  <span class="hostel">Hilton Otel</span>
+                </div>
+                <div class="select-group">
+                  <div class="select-title">İştirak növünü seçin:</div>
+                  <div class="select">
+                    <span
+                      onclick="openSelect(event, 'item1')"
+                      class="select-text"
+                      ><span class="text">Seç</span>
+                      <div class="info">
+                        <span class="price"></span>
+                        <div class="icon">
+                          <svg
+                            width="17"
+                            height="9"
+                            viewBox="0 0 17 9"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M15.3785 1.62158L9.37031 7.62973C8.92701 8.07303 8.20828 8.07303 7.76499 7.62973L1.75684 1.62158"
+                              stroke="#414141"
+                              stroke-width="1.7027"
+                              stroke-linecap="round"
+                            />
+                          </svg>
+                        </div></div
+                    ></span>
+                    <ul class="select-list" id="item1">
+                      <li class="select-item">
+                        <span class="text">Qeyri-tibb işçilər</span>
+                        <span class="price">350 Azn</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="btn-area">
+                  <button class="btn pay" onclick="pay(item1)">Ödəniş et</button>
+                </div>
+              </div>
+            </div>
+            <div class="register-card-area">
+              <div class="top">
+                <img
+                  src="./assets/img/WhatsApp Image 2023-08-24 at 14.51 1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="bottom">
+                <h4 class="title">
+                  II BEYNƏLXALQ SÜD VƏZİSİ XƏRÇƏNGİ KONQRESİ
+                </h4>
+                <div class="time">
+                  <span class="date">27-28 oktyabr 2023 </span> /
+                  <span class="hour"> 09:00</span>
+                </div>
+                <div class="location">
+                  <span class="country">Bakı </span>|
+                  <span class="hostel">Hilton Otel</span>
+                </div>
+                <div class="select-group">
+                  <div class="select-title">İştirak növünü seçin:</div>
+                  <div class="select">
+                    <span
+                      onclick="openSelect(event, 'item2')"
+                      class="select-text"
+                      ><span class="text">Seç</span>
+                      <div class="info">
+                        <span class="price"></span>
+                        <div class="icon">
+                          <svg
+                            width="17"
+                            height="9"
+                            viewBox="0 0 17 9"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M15.3785 1.62158L9.37031 7.62973C8.92701 8.07303 8.20828 8.07303 7.76499 7.62973L1.75684 1.62158"
+                              stroke="#414141"
+                              stroke-width="1.7027"
+                              stroke-linecap="round"
+                            />
+                          </svg>
+                        </div></div
+                    ></span>
+                    <ul class="select-list" id="item2">
+                      <li class="select-item">
+                        <span class="text">Qeyri-tibb işçilər</span>
+                        <span class="price">350 Azn</span>
+                      </li>
+                      <li class="select-item">
+                        <span class="text">-tibb işçilər</span>
+                        <span class="price">240 Azn</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="btn-area">
+                  <button class="btn pay" onclick="pay(item2)">Ödəniş et</button>
+                </div>
+              </div>
+            </div>
+            <div class="register-card-area">
+              <div class="top">
+                <img
+                  src="./assets/img/WhatsApp Image 2023-08-24 at 14.51 1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="bottom">
+                <h4 class="title">
+                  II BEYNƏLXALQ SÜD VƏZİSİ XƏRÇƏNGİ KONQRESİ
+                </h4>
+                <div class="time">
+                  <span class="date">27-28 oktyabr 2023 </span> /
+                  <span class="hour"> 09:00</span>
+                </div>
+                <div class="location">
+                  <span class="country">Bakı </span>|
+                  <span class="hostel">Hilton Otel</span>
+                </div>
+                <div class="select-group">
+                  <div class="select-title">İştirak növünü seçin:</div>
+                  <div class="select">
+                    <span
+                      onclick="openSelect(event, 'item3')"
+                      class="select-text"
+                      ><span class="text">Seç</span>
+                      <div class="info">
+                        <span class="price"></span>
+                        <div class="icon">
+                          <svg
+                            width="17"
+                            height="9"
+                            viewBox="0 0 17 9"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M15.3785 1.62158L9.37031 7.62973C8.92701 8.07303 8.20828 8.07303 7.76499 7.62973L1.75684 1.62158"
+                              stroke="#414141"
+                              stroke-width="1.7027"
+                              stroke-linecap="round"
+                            />
+                          </svg>
+                        </div></div
+                    ></span>
+                    <ul class="select-list" id="item3">
+                      <li class="select-item">
+                        <span class="text">Qeyri-tibb işçilər</span>
+                        <span class="price">350 Azn</span>
+                      </li>
+                      <li class="select-item">
+                        <span class="text">-tibb işçilər</span>
+                        <span class="price">240 Azn</span>
+                      </li>
+                      <li class="select-item">
+                        <span class="text">Qeyri- işçilər</span>
+                        <span class="price">120 Azn</span>
+                      </li>
+                      <li class="select-item">
+                        <span class="text">Qeyri-tibb </span>
+                        <span class="price">130 Azn</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="btn-area">
+                  <button class="btn pay" onclick="pay(item3)">Ödəniş et</button>
+                </div>
+              </div>
+            </div>
+            <div class="register-card-area abstract">
+              <div class="top">
+                <img
+                  src="./assets/img/WhatsApp Image 2023-08-24 at 14.51 1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="bottom">
+                <div class="btn-area">
+                  <button class="btn" >Abstrakt göndər</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="profile">
+            <button class="profileBtn">Profile</button>
+            <button class="exitBtn">Çıxış</button>
+          </div>
+        </div>
+        <div class="overlay"></div>
+      </section>
+    </main>
+    <!-- -------------------------------- Axios -------------------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- -------------------------------- Axios -------------------------------- -->
+
+    <!-- -------------------------------- My Js -------------------------------- -->
+    <script src="./assets/js/register-card.js"></script>
+    <!-- -------------------------------- My Js -------------------------------- -->
+  </body>
+</html>

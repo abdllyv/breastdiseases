@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/scss/main.css" />
+  </head>
+  <body>
+    <main>
+      <section class="log-in-out">
+        <div class="row">
+          <div class="form-area">
+            <h4 class="title">Daxil ol</h4>
+            <p class="text">Hesabınız yoxdur? <a href="">Qeydiyyat</a></p>
+            <form class="form-sing-in-out" id="sing-in">
+              <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="inp"
+                  id="loginEmail"
+                  autocomplete="on"
+                />
+                <div id="loqin-email-error" class="error-message"></div>
+              </div>
+              <div class="form-group">
+                <label for="loginPassword">Şifrə</label>
+                <input
+                  type="password"
+                  name="password"
+                  class="inp"
+                  id="loginPassword"
+                  autocomplete="of"
+                />
+                <div id="loqin-password-error" class="error-message"></div>
+              </div>
+              <div id="loqin-respons-error" class="error-message">
+              </div>
+              <a href="" class="forget-link">şifrəni unutmusan?</a>
+              <div class="visible-password">
+                <input type="checkbox" name="checkbox" id="loginCheckbox" />
+                <label for="loginCheckbox">Şifrəni göstər</label>
+              </div>
+              <button class="btn">Daxil ol</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- -------------------------------- Axios -------------------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- -------------------------------- Axios -------------------------------- -->
+
+    <!-- -------------------------------- My JS -------------------------------- -->
+    <script src="./assets/js/login.js"></script>
+    <!-- -------------------------------- My Js -------------------------------- -->
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/scss/main.css" />
+  </head>
+  <body>
+    <main>
+      <section class="log-in-out">
+        <div class="row">
+          <div class="form-area">
+            <h4 class="title">OTP</h4>
+            <p class="text">Doğrulama kodunu daxil edin</p>
+            <form class="form-sing-in-out" id="otp-form">
+              <div class="form-group">
+                <label for="otp-code">Kodu yaz</label>
+                <input type="text" name="otp" id="otp-code" />
+                <div id="otp-code-err" class="error-message"></div>
+              </div>
+              <div class="otp-area">
+                <span class="timer">
+                  0<span class="minute">1</span> :<span class="second"
+                    >59</span
+                  ></span
+                >
+                <div class="otp-text">
+                  Doğrulama kodunu sizin göndərildi. Mesaj kutunuzu yoxlayın.
+                </div>
+                <span class="send-otp">Kod almadım. Yenidən göndərin.</span>
+              </div>
+              <button class="btn">Doğrulayın</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- -------------------------------- Axios -------------------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- -------------------------------- Axios -------------------------------- -->
+
+    <!-- -------------------------------- My Js -------------------------------- -->
+    <script src="./assets/js/otp.js"></script>
+    <!-- -------------------------------- My JS -------------------------------- -->
+  </body>
+</html>

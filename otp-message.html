@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- ------------------------------- My Css -------------------------------- -->
+    <link rel="stylesheet" href="./assets/scss/main.css" />
+    <!-- ------------------------------- My Css -------------------------------- -->
+  </head>
+  <body>
+    <main>
+      <section class="log-in-out otp-message">
+        <div class="row">
+          <div class="form-area">
+            <h4 class="title">Şifrənin bərpası</h4>
+            <p class="text">Hesabınız yoxdur? <a href="">Qeydiyyat </a></p>
+            <form class="form-sing-in-out" id="otp-message">
+              <div class="form-group">
+                <label for="register-email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="otp-message-email"
+                  autocomplete="on"
+                />
+                <div id="otp-message-email-error" class="error-message"></div>
+              </div>
+              <button class="btn otp-message-btn">Doğrulayın</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- -------------------------------- Axios -------------------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- -------------------------------- Axios -------------------------------- -->
+
+    <!-- ---------------------------- My JavaScript ---------------------------- -->
+    <script src="./assets/js/otp-message.js"></script>
+    <!-- ---------------------------- My JavaScript ---------------------------- -->
+  </body>
+</html>

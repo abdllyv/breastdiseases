@@ -1,0 +1,283 @@
+.register-card {
+  padding: 25px 0;
+  min-height: 60vh;
+  height: 100%;
+  .register-pocket-container {
+    .register-title {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px;
+      color: #000;
+      margin-bottom: 10px;
+    }
+    .card-box {
+      width: 100%;
+      display: flex;
+      gap: 3%;
+      row-gap: 37px;
+      flex-wrap: wrap;
+      .register-card-area {
+        width: 30.9%;
+        .top {
+          width: 100%;
+          aspect-ratio: 1/1;
+          img {
+            width: 100%;
+          }
+        }
+        .bottom {
+          .title {
+            color: #000;
+            text-transform: uppercase;
+            font-weight: 600;
+            line-height: 21px;
+            margin-top: 11px;
+            font-size: 16px;
+          }
+          .time,
+          .location {
+            span {
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 18px;
+              color: #000;
+            }
+          }
+          .select-group {
+            .select-title {
+              font-size: 12px;
+              font-weight: 600;
+              line-height: 18px;
+              color: #000;
+              display: inline-block;
+            }
+          }
+
+          .select {
+            cursor: pointer;
+            position: relative;
+            // height: 44px;
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid #1f4586;
+            padding: 0 13px;
+            margin: 4px 0 10px;
+            .text {
+              width: 100%;
+              display: inline-block;
+              word-wrap: break-word;
+            }
+            .price {
+              width: 77px;
+              font-size: 13px;
+              font-weight: 600;
+            }
+            .select-text {
+              color: #414141;
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 18px;
+              width: 100%;
+              height: 100%;
+              padding: 12px 0;
+              display: flex;
+              justify-content: space-between;
+              gap: 5px;
+              .text {
+                max-width: 180px;
+              }
+              .info {
+                display: flex;
+              }
+            }
+            dl,
+            ol,
+            ul {
+              margin-top: 0;
+              margin-bottom: 0;
+              padding-left: 0;
+            }
+            .select-list {
+              position: absolute;
+              top: 45px;
+              left: 0;
+              max-width: 336px;
+              width: 100%;
+              overflow-y: scroll;
+              &::-webkit-scrollbar-track {
+                background-color: transparent;
+              }
+              &::-webkit-scrollbar {
+                width: 3px;
+              }
+              &::-webkit-scrollbar-thumb {
+                border-radius: 5px;
+                background-color: #757575;
+              }
+              &::-webkit-scrollbar-track-piece:end {
+                margin-bottom: 15px;
+              }
+              &::-webkit-scrollbar-track-piece:start {
+                margin-top: 15px;
+              }
+              border-radius: 10px;
+              border: 1px solid #1f4586;
+              background-color: #fff;
+              z-index: 1;
+              opacity: 0;
+              visibility: hidden;
+              height: 0;
+              transition: 0.3s ease;
+              &.active-select {
+                height: 176px;
+                opacity: 1;
+                visibility: visible;
+                z-index: 999;
+              }
+              li {
+                padding: 14px 12px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 5px;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 16px;
+                color: #414141;
+                transition: 0.3 ease;
+                .text {
+                  max-width: 245px;
+                }
+
+                &:hover {
+                  background-color: #ebebeb;
+                }
+                &.active-item {
+                  background-color: #ebebeb;
+                }
+              }
+            }
+          }
+          .btn-area {
+            width: 100%;
+            text-align: right;
+            .btn {
+              cursor: pointer;
+              color: #fff;
+              font-size: 12px;
+              font-weight: 500;
+              line-height: 18px;
+              max-width: 126px;
+              width: 100%;
+              border-radius: 4px;
+              background-color: #1f4586;
+              padding: 7px;
+              outline: none;
+              border-color: transparent;
+            }
+          }
+        }
+      }
+      .abstract {
+        .bottom {
+          .btn-area {
+            margin-top: 12px;
+            .btn {
+              max-width: 185px;
+              background-color: #82bd3f;
+            }
+          }
+        }
+      }
+    }
+    .profile {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      button {
+        max-width: 94px;
+        width: 100%;
+        border-radius: 8px;
+        padding: 8px;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        margin: 0 5px;
+        color: #fff;
+      }
+      .profileBtn {
+        background-color: #1f4586;
+      }
+      .exitBtn {
+        background-color: #ee1d52;
+      }
+    }
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background-color: transparent;
+    display: none;
+    &.isOpen {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .register-card {
+    .register-pocket-container {
+      .card-box {
+        gap: 4%;
+        row-gap: 37px;
+        .register-card-area {
+          width: 46%;
+          .bottom {
+            .title {
+              line-height: 24px;
+              margin-top: 5px;
+            }
+            .time,
+            .location {
+              span {
+                line-height: 21px;
+              }
+            }
+            .btn-area {
+              .btn {
+                font-size: 14px;
+                line-height: 21px;
+                padding: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .register-card {
+    .register-pocket-container {
+      .card-box {
+        .register-card-area {
+          width: 100%;
+          .bottom {
+            .select-group {
+              .select {
+                .select-list {
+                  max-width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

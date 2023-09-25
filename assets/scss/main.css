@@ -1,0 +1,1836 @@
+/* ------------------------------- Reset Code ------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.abstract-container,
+.sponsor-container,
+.register-pocket-container,
+.contact-container,
+.header-container,
+.footer-container {
+  max-width: 1112px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ------------------------------- components ------------------------------- */
+.header {
+  width: 100%;
+}
+.header .header-container .top {
+  width: 100%;
+  max-height: 112px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header-container .top .logo {
+  display: inline-block;
+  max-width: 80px;
+  width: 100%;
+  margin-right: 5px;
+}
+.header .header-container .top .logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header .header-container .top .contact {
+  display: flex;
+  align-items: center;
+  width: 39%;
+  gap: 30px;
+}
+.header .header-container .top .contact .contact-info {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #000;
+}
+.header .header-container .top .contact .contact-info .icon {
+  width: 19px;
+  aspect-ratio: 1/1;
+  margin-right: 16px;
+}
+.header .bottom {
+  width: 100%;
+  background-color: #1f4586;
+}
+.header .bottom .header-container .row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .bottom .header-container .row .logo {
+  display: none;
+  max-width: 32px;
+  width: 100%;
+  margin: 16px 0;
+}
+.header .bottom .header-container .row .logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header .bottom .header-container .row .nav-bar {
+  width: 100%;
+}
+.header .bottom .header-container .row .nav-bar .nav-list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .bottom .header-container .row .nav-bar .nav-list .nav-item {
+  font-size: 12px;
+  line-height: 12px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.header .bottom .header-container .row .nav-bar .nav-list .nav-item a {
+  display: inline-block;
+  color: #fff;
+  padding: 22px 10px;
+}
+.header .bottom .header-container .row .nav-bar .nav-list .nav-item a.active {
+  background-color: #82bd3f;
+}
+.header .bottom .header-container .row .nav-bar .nav-list .nav-item svg {
+  width: 15px;
+  margin-left: 10px;
+}
+.header .bottom .header-container .row .nav-bar .nav-list .nav-item img {
+  width: 25px;
+}
+.header .bottom .header-container .row .nav-bar .nav-list .nav-item .drop-list {
+  position: absolute;
+  top: 31px;
+  left: -10px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2509803922);
+  background-color: #fff;
+  border-radius: 6px;
+  transform: translateY(-10px);
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease;
+}
+.header .bottom .header-container .row .nav-bar .nav-list .nav-item .drop-list.isOpen {
+  transform: translateY(0px);
+  opacity: 1;
+  visibility: visible;
+}
+.header .bottom .header-container .row .nav-bar .nav-list .nav-item .drop-list .drop-item {
+  display: flex;
+  align-items: center;
+}
+.header .bottom .header-container .row .nav-bar .nav-list .nav-item .drop-list .drop-item img {
+  margin-left: 10px;
+}
+.header .bottom .header-container .row .nav-bar .nav-list .nav-item .drop-list .drop-item a {
+  color: #000;
+  padding: 9px 10px;
+  word-wrap: none;
+  font-size: 16px;
+  line-height: 16px;
+  width: 138px;
+}
+.header .bottom .header-container .row .nav-bar .nav-list .nav-item .language {
+  left: -106px;
+}
+.header .bottom .header-container .row .mobile-menu {
+  display: none;
+  padding: 8px;
+  cursor: pointer;
+}
+.header .bottom .header-container .row .mobile-menu svg {
+  width: 24px;
+  aspect-ratio: 1/1;
+}
+.header .side-bar {
+  background-color: #fff;
+  max-width: 390px;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99999;
+  transition: 0.4s ease-in;
+}
+.header .side-bar.isOpenMenu {
+  transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
+}
+.header .side-bar .mobile-head {
+  padding: 17.5px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f5f9;
+}
+.header .side-bar .mobile-head .logo {
+  max-width: 32px;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.header .side-bar .mobile-head .logo img {
+  width: 100%;
+}
+.header .side-bar .mobile-head .icon {
+  cursor: pointer;
+  padding: 8px;
+  max-width: 40px;
+  width: 100%;
+  display: flex;
+}
+.header .side-bar .mobile-head .icon svg {
+  width: 100%;
+}
+.header .side-bar .mobile-body {
+  padding: 0 10px;
+  margin-top: 18px;
+}
+.header .side-bar .mobile-body .mobile-list .mobile-item {
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  color: #0f172a;
+  margin: 5px 0;
+  padding: 7px 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.header .side-bar .mobile-body .mobile-list .mobile-item.activeSelect {
+  border-radius: 6px;
+  background: #ededed;
+}
+.header .side-bar .mobile-body .mobile-list .mobile-item a {
+  color: #0f172a;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header .side-bar .mobile-body .mobile-list .mobile-item a img {
+  width: 25px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header .side-bar .mobile-body .mobile-list .mobile-drop-item {
+  font-weight: 400;
+}
+.header .side-bar .mobile-body .mobile-drop-list {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transform-origin: top center;
+  transform: scaleY(0);
+  transition: 0.3s ease;
+}
+.header .side-bar .mobile-body .mobile-drop-list.active-mobile-drop {
+  visibility: visible;
+  opacity: 1;
+  height: 72px;
+  transform: scaleY(1);
+  transform-origin: top center;
+}
+.header .side-bar .mobile-body .btn {
+  color: #fff;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  background-color: #1f4586;
+  box-shadow: 0px 1px 2px 0px rgba(15, 23, 42, 0.0588235294);
+  padding: 11px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+.header .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background-color: transparent;
+  display: none;
+  transition: 0.3s ease;
+}
+.header .overlay.isOpenOverlay {
+  display: block;
+}
+.header .overlay.mobileActive {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.1450980392);
+}
+
+@media (max-width: 1040px) {
+  .header .header-container .top {
+    max-height: 76px;
+  }
+  .header .header-container .top .logo {
+    display: none;
+  }
+  .header .header-container .top .contact {
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+  }
+  .header .header-container .top .contact .contact-info span {
+    word-break: break-all;
+  }
+  .header .bottom {
+    width: 100%;
+    height: 64px;
+    background-color: #1f4586;
+  }
+  .header .bottom .header-container .row .logo {
+    display: block;
+  }
+  .header .bottom .header-container .row .nav-bar {
+    display: none;
+  }
+  .header .bottom .header-container .row .mobile-menu {
+    display: block;
+  }
+}
+@media (max-width: 575px) {
+  .header .header-container .top {
+    margin-top: 15px;
+  }
+  .header .header-container .top .contact {
+    gap: 8px;
+    flex-direction: column;
+  }
+  .header .header-container .top .contact .contact-info .icon {
+    width: 16px;
+    margin-right: 13px;
+  }
+  .header .header-container .top .contact .contact-info span {
+    font-size: 12px;
+  }
+}
+.footer {
+  background-color: #1f4586;
+  margin-top: 80px;
+}
+.footer .footer-container .row {
+  padding: 15px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .footer-container .row .logo {
+  max-width: 80px;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.footer .footer-container .row .logo img {
+  width: 100%;
+}
+.footer .footer-container .row .end-text {
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  color: #fff;
+}
+
+@media (max-width: 575px) {
+  .footer .footer-container .row {
+    flex-direction: column;
+    row-gap: 30px;
+    text-align: center;
+  }
+}
+/* ---------------------------------- Page ---------------------------------- */
+.abstract,
+.sponsor {
+  padding-bottom: 25px;
+}
+.abstract .abstract-container #abstract-form dl,
+.abstract .abstract-container #abstract-form ol,
+.abstract .abstract-container #abstract-form ul,
+.abstract .abstract-container #sponsor-form dl,
+.abstract .abstract-container #sponsor-form ol,
+.abstract .abstract-container #sponsor-form ul,
+.abstract .sponsor-container #abstract-form dl,
+.abstract .sponsor-container #abstract-form ol,
+.abstract .sponsor-container #abstract-form ul,
+.abstract .sponsor-container #sponsor-form dl,
+.abstract .sponsor-container #sponsor-form ol,
+.abstract .sponsor-container #sponsor-form ul,
+.sponsor .abstract-container #abstract-form dl,
+.sponsor .abstract-container #abstract-form ol,
+.sponsor .abstract-container #abstract-form ul,
+.sponsor .abstract-container #sponsor-form dl,
+.sponsor .abstract-container #sponsor-form ol,
+.sponsor .abstract-container #sponsor-form ul,
+.sponsor .sponsor-container #abstract-form dl,
+.sponsor .sponsor-container #abstract-form ol,
+.sponsor .sponsor-container #abstract-form ul,
+.sponsor .sponsor-container #sponsor-form dl,
+.sponsor .sponsor-container #sponsor-form ol,
+.sponsor .sponsor-container #sponsor-form ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.abstract .abstract-container #abstract-form .abstract-title,
+.abstract .abstract-container #abstract-form .sponsor-title,
+.abstract .abstract-container #sponsor-form .abstract-title,
+.abstract .abstract-container #sponsor-form .sponsor-title,
+.abstract .sponsor-container #abstract-form .abstract-title,
+.abstract .sponsor-container #abstract-form .sponsor-title,
+.abstract .sponsor-container #sponsor-form .abstract-title,
+.abstract .sponsor-container #sponsor-form .sponsor-title,
+.sponsor .abstract-container #abstract-form .abstract-title,
+.sponsor .abstract-container #abstract-form .sponsor-title,
+.sponsor .abstract-container #sponsor-form .abstract-title,
+.sponsor .abstract-container #sponsor-form .sponsor-title,
+.sponsor .sponsor-container #abstract-form .abstract-title,
+.sponsor .sponsor-container #abstract-form .sponsor-title,
+.sponsor .sponsor-container #sponsor-form .abstract-title,
+.sponsor .sponsor-container #sponsor-form .sponsor-title {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #212529;
+  margin: 25px 0 45px;
+}
+.abstract .abstract-container #abstract-form .error-message,
+.abstract .abstract-container #sponsor-form .error-message,
+.abstract .sponsor-container #abstract-form .error-message,
+.abstract .sponsor-container #sponsor-form .error-message,
+.sponsor .abstract-container #abstract-form .error-message,
+.sponsor .abstract-container #sponsor-form .error-message,
+.sponsor .sponsor-container #abstract-form .error-message,
+.sponsor .sponsor-container #sponsor-form .error-message {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  color: #ff3d71;
+  padding: 3px;
+}
+.abstract .abstract-container #abstract-form .info-area,
+.abstract .abstract-container #sponsor-form .info-area,
+.abstract .sponsor-container #abstract-form .info-area,
+.abstract .sponsor-container #sponsor-form .info-area,
+.sponsor .abstract-container #abstract-form .info-area,
+.sponsor .abstract-container #sponsor-form .info-area,
+.sponsor .sponsor-container #abstract-form .info-area,
+.sponsor .sponsor-container #sponsor-form .info-area {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1%;
+}
+.abstract .abstract-container #abstract-form .info-area label,
+.abstract .abstract-container #abstract-form .info-area .select-label,
+.abstract .abstract-container #sponsor-form .info-area label,
+.abstract .abstract-container #sponsor-form .info-area .select-label,
+.abstract .sponsor-container #abstract-form .info-area label,
+.abstract .sponsor-container #abstract-form .info-area .select-label,
+.abstract .sponsor-container #sponsor-form .info-area label,
+.abstract .sponsor-container #sponsor-form .info-area .select-label,
+.sponsor .abstract-container #abstract-form .info-area label,
+.sponsor .abstract-container #abstract-form .info-area .select-label,
+.sponsor .abstract-container #sponsor-form .info-area label,
+.sponsor .abstract-container #sponsor-form .info-area .select-label,
+.sponsor .sponsor-container #abstract-form .info-area label,
+.sponsor .sponsor-container #abstract-form .info-area .select-label,
+.sponsor .sponsor-container #sponsor-form .info-area label,
+.sponsor .sponsor-container #sponsor-form .info-area .select-label {
+  color: #212529;
+  display: block;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  padding-bottom: 3px;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group,
+.abstract .abstract-container #sponsor-form .info-area .form-group,
+.abstract .sponsor-container #abstract-form .info-area .form-group,
+.abstract .sponsor-container #sponsor-form .info-area .form-group,
+.sponsor .abstract-container #abstract-form .info-area .form-group,
+.sponsor .abstract-container #sponsor-form .info-area .form-group,
+.sponsor .sponsor-container #abstract-form .info-area .form-group,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group {
+  margin: 15px 0;
+  color: #212529;
+  max-width: 336px;
+  width: 100%;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group input,
+.abstract .abstract-container #sponsor-form .info-area .form-group input,
+.abstract .sponsor-container #abstract-form .info-area .form-group input,
+.abstract .sponsor-container #sponsor-form .info-area .form-group input,
+.sponsor .abstract-container #abstract-form .info-area .form-group input,
+.sponsor .abstract-container #sponsor-form .info-area .form-group input,
+.sponsor .sponsor-container #abstract-form .info-area .form-group input,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group input {
+  width: 100%;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid #1f4586;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 12px;
+  padding: 0 16px;
+  color: inherit;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group input::-moz-placeholder, .abstract .abstract-container #sponsor-form .info-area .form-group input::-moz-placeholder, .abstract .sponsor-container #abstract-form .info-area .form-group input::-moz-placeholder, .abstract .sponsor-container #sponsor-form .info-area .form-group input::-moz-placeholder, .sponsor .abstract-container #abstract-form .info-area .form-group input::-moz-placeholder, .sponsor .abstract-container #sponsor-form .info-area .form-group input::-moz-placeholder, .sponsor .sponsor-container #abstract-form .info-area .form-group input::-moz-placeholder, .sponsor .sponsor-container #sponsor-form .info-area .form-group input::-moz-placeholder {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #c3c3c3;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group input::placeholder,
+.abstract .abstract-container #sponsor-form .info-area .form-group input::placeholder,
+.abstract .sponsor-container #abstract-form .info-area .form-group input::placeholder,
+.abstract .sponsor-container #sponsor-form .info-area .form-group input::placeholder,
+.sponsor .abstract-container #abstract-form .info-area .form-group input::placeholder,
+.sponsor .abstract-container #sponsor-form .info-area .form-group input::placeholder,
+.sponsor .sponsor-container #abstract-form .info-area .form-group input::placeholder,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group input::placeholder {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #c3c3c3;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group input[type=number]::-webkit-inner-spin-button,
+.abstract .abstract-container #sponsor-form .info-area .form-group input[type=number]::-webkit-inner-spin-button,
+.abstract .sponsor-container #abstract-form .info-area .form-group input[type=number]::-webkit-inner-spin-button,
+.abstract .sponsor-container #sponsor-form .info-area .form-group input[type=number]::-webkit-inner-spin-button,
+.sponsor .abstract-container #abstract-form .info-area .form-group input[type=number]::-webkit-inner-spin-button,
+.sponsor .abstract-container #sponsor-form .info-area .form-group input[type=number]::-webkit-inner-spin-button,
+.sponsor .sponsor-container #abstract-form .info-area .form-group input[type=number]::-webkit-inner-spin-button,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group .select,
+.abstract .abstract-container #sponsor-form .info-area .form-group .select,
+.abstract .sponsor-container #abstract-form .info-area .form-group .select,
+.abstract .sponsor-container #sponsor-form .info-area .form-group .select,
+.sponsor .abstract-container #abstract-form .info-area .form-group .select,
+.sponsor .abstract-container #sponsor-form .info-area .form-group .select,
+.sponsor .sponsor-container #abstract-form .info-area .form-group .select,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group .select {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #1f4586;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 12px;
+  padding: 0 16px;
+  color: inherit;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group .select .select-title,
+.abstract .abstract-container #sponsor-form .info-area .form-group .select .select-title,
+.abstract .sponsor-container #abstract-form .info-area .form-group .select .select-title,
+.abstract .sponsor-container #sponsor-form .info-area .form-group .select .select-title,
+.sponsor .abstract-container #abstract-form .info-area .form-group .select .select-title,
+.sponsor .abstract-container #sponsor-form .info-area .form-group .select .select-title,
+.sponsor .sponsor-container #abstract-form .info-area .form-group .select .select-title,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group .select .select-title {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group .select .select-title .text,
+.abstract .abstract-container #sponsor-form .info-area .form-group .select .select-title .text,
+.abstract .sponsor-container #abstract-form .info-area .form-group .select .select-title .text,
+.abstract .sponsor-container #sponsor-form .info-area .form-group .select .select-title .text,
+.sponsor .abstract-container #abstract-form .info-area .form-group .select .select-title .text,
+.sponsor .abstract-container #sponsor-form .info-area .form-group .select .select-title .text,
+.sponsor .sponsor-container #abstract-form .info-area .form-group .select .select-title .text,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group .select .select-title .text {
+  width: 94%;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 12px;
+  padding-right: 10px;
+  word-wrap: break-word;
+  padding: 15.2px 0;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group .select .select-title .icon,
+.abstract .abstract-container #sponsor-form .info-area .form-group .select .select-title .icon,
+.abstract .sponsor-container #abstract-form .info-area .form-group .select .select-title .icon,
+.abstract .sponsor-container #sponsor-form .info-area .form-group .select .select-title .icon,
+.sponsor .abstract-container #abstract-form .info-area .form-group .select .select-title .icon,
+.sponsor .abstract-container #sponsor-form .info-area .form-group .select .select-title .icon,
+.sponsor .sponsor-container #abstract-form .info-area .form-group .select .select-title .icon,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group .select .select-title .icon {
+  width: 5%;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group .select .select-list,
+.abstract .abstract-container #sponsor-form .info-area .form-group .select .select-list,
+.abstract .sponsor-container #abstract-form .info-area .form-group .select .select-list,
+.abstract .sponsor-container #sponsor-form .info-area .form-group .select .select-list,
+.sponsor .abstract-container #abstract-form .info-area .form-group .select .select-list,
+.sponsor .abstract-container #sponsor-form .info-area .form-group .select .select-list,
+.sponsor .sponsor-container #abstract-form .info-area .form-group .select .select-list,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group .select .select-list {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  max-width: 336px;
+  width: 100%;
+  overflow-y: scroll;
+  border-radius: 10px;
+  border: 1px solid #1f4586;
+  background-color: #fff;
+  z-index: 99;
+  opacity: 0;
+  height: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar-track,
+.abstract .abstract-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar-track,
+.abstract .sponsor-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar-track,
+.abstract .sponsor-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar-track,
+.sponsor .abstract-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar-track,
+.sponsor .abstract-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar-track,
+.sponsor .sponsor-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar-track,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar,
+.abstract .abstract-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar,
+.abstract .sponsor-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar,
+.abstract .sponsor-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar,
+.sponsor .abstract-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar,
+.sponsor .abstract-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar,
+.sponsor .sponsor-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar {
+  width: 3px;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar-thumb,
+.abstract .abstract-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar-thumb,
+.abstract .sponsor-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar-thumb,
+.abstract .sponsor-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar-thumb,
+.sponsor .abstract-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar-thumb,
+.sponsor .abstract-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar-thumb,
+.sponsor .sponsor-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar-thumb,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #757575;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar-track-piece:end,
+.abstract .abstract-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar-track-piece:end,
+.abstract .sponsor-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar-track-piece:end,
+.abstract .sponsor-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar-track-piece:end,
+.sponsor .abstract-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar-track-piece:end,
+.sponsor .abstract-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar-track-piece:end,
+.sponsor .sponsor-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar-track-piece:end,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar-track-piece:end {
+  margin-bottom: 15px;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar-track-piece:start,
+.abstract .abstract-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar-track-piece:start,
+.abstract .sponsor-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar-track-piece:start,
+.abstract .sponsor-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar-track-piece:start,
+.sponsor .abstract-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar-track-piece:start,
+.sponsor .abstract-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar-track-piece:start,
+.sponsor .sponsor-container #abstract-form .info-area .form-group .select .select-list::-webkit-scrollbar-track-piece:start,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group .select .select-list::-webkit-scrollbar-track-piece:start {
+  margin-top: 15px;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group .select .select-list.active-select,
+.abstract .abstract-container #sponsor-form .info-area .form-group .select .select-list.active-select,
+.abstract .sponsor-container #abstract-form .info-area .form-group .select .select-list.active-select,
+.abstract .sponsor-container #sponsor-form .info-area .form-group .select .select-list.active-select,
+.sponsor .abstract-container #abstract-form .info-area .form-group .select .select-list.active-select,
+.sponsor .abstract-container #sponsor-form .info-area .form-group .select .select-list.active-select,
+.sponsor .sponsor-container #abstract-form .info-area .form-group .select .select-list.active-select,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group .select .select-list.active-select {
+  height: 176px;
+  opacity: 1;
+  visibility: visible;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group .select .select-list li,
+.abstract .abstract-container #sponsor-form .info-area .form-group .select .select-list li,
+.abstract .sponsor-container #abstract-form .info-area .form-group .select .select-list li,
+.abstract .sponsor-container #sponsor-form .info-area .form-group .select .select-list li,
+.sponsor .abstract-container #abstract-form .info-area .form-group .select .select-list li,
+.sponsor .abstract-container #sponsor-form .info-area .form-group .select .select-list li,
+.sponsor .sponsor-container #abstract-form .info-area .form-group .select .select-list li,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group .select .select-list li {
+  padding: 15px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  transition: 0.3 ease;
+  width: 100%;
+  word-wrap: break-word;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group .select .select-list li:hover,
+.abstract .abstract-container #sponsor-form .info-area .form-group .select .select-list li:hover,
+.abstract .sponsor-container #abstract-form .info-area .form-group .select .select-list li:hover,
+.abstract .sponsor-container #sponsor-form .info-area .form-group .select .select-list li:hover,
+.sponsor .abstract-container #abstract-form .info-area .form-group .select .select-list li:hover,
+.sponsor .abstract-container #sponsor-form .info-area .form-group .select .select-list li:hover,
+.sponsor .sponsor-container #abstract-form .info-area .form-group .select .select-list li:hover,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group .select .select-list li:hover {
+  background-color: #ebebeb;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group .select .select-list li.active-item,
+.abstract .abstract-container #sponsor-form .info-area .form-group .select .select-list li.active-item,
+.abstract .sponsor-container #abstract-form .info-area .form-group .select .select-list li.active-item,
+.abstract .sponsor-container #sponsor-form .info-area .form-group .select .select-list li.active-item,
+.sponsor .abstract-container #abstract-form .info-area .form-group .select .select-list li.active-item,
+.sponsor .abstract-container #sponsor-form .info-area .form-group .select .select-list li.active-item,
+.sponsor .sponsor-container #abstract-form .info-area .form-group .select .select-list li.active-item,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group .select .select-list li.active-item {
+  background-color: #ebebeb;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group-img,
+.abstract .abstract-container #sponsor-form .info-area .form-group-img,
+.abstract .sponsor-container #abstract-form .info-area .form-group-img,
+.abstract .sponsor-container #sponsor-form .info-area .form-group-img,
+.sponsor .abstract-container #abstract-form .info-area .form-group-img,
+.sponsor .abstract-container #sponsor-form .info-area .form-group-img,
+.sponsor .sponsor-container #abstract-form .info-area .form-group-img,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group-img {
+  max-width: 152px;
+  width: 100%;
+  margin: 15px 0;
+  position: relative;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group-img input,
+.abstract .abstract-container #sponsor-form .info-area .form-group-img input,
+.abstract .sponsor-container #abstract-form .info-area .form-group-img input,
+.abstract .sponsor-container #sponsor-form .info-area .form-group-img input,
+.sponsor .abstract-container #abstract-form .info-area .form-group-img input,
+.sponsor .abstract-container #sponsor-form .info-area .form-group-img input,
+.sponsor .sponsor-container #abstract-form .info-area .form-group-img input,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group-img input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group-img input[type=file],
+.abstract .abstract-container #sponsor-form .info-area .form-group-img input[type=file],
+.abstract .sponsor-container #abstract-form .info-area .form-group-img input[type=file],
+.abstract .sponsor-container #sponsor-form .info-area .form-group-img input[type=file],
+.sponsor .abstract-container #abstract-form .info-area .form-group-img input[type=file],
+.sponsor .abstract-container #sponsor-form .info-area .form-group-img input[type=file],
+.sponsor .sponsor-container #abstract-form .info-area .form-group-img input[type=file],
+.sponsor .sponsor-container #sponsor-form .info-area .form-group-img input[type=file] {
+  visibility: hidden;
+  height: 0;
+  color: transparent;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group-img .file-label,
+.abstract .abstract-container #sponsor-form .info-area .form-group-img .file-label,
+.abstract .sponsor-container #abstract-form .info-area .form-group-img .file-label,
+.abstract .sponsor-container #sponsor-form .info-area .form-group-img .file-label,
+.sponsor .abstract-container #abstract-form .info-area .form-group-img .file-label,
+.sponsor .abstract-container #sponsor-form .info-area .form-group-img .file-label,
+.sponsor .sponsor-container #abstract-form .info-area .form-group-img .file-label,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group-img .file-label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #fff;
+  background: #9f9f9f;
+  display: block;
+  max-width: 152px;
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-radius: 10px;
+  padding: 13px;
+  cursor: pointer;
+}
+.abstract .abstract-container #abstract-form .info-area .form-group-img .inp-text,
+.abstract .abstract-container #sponsor-form .info-area .form-group-img .inp-text,
+.abstract .sponsor-container #abstract-form .info-area .form-group-img .inp-text,
+.abstract .sponsor-container #sponsor-form .info-area .form-group-img .inp-text,
+.sponsor .abstract-container #abstract-form .info-area .form-group-img .inp-text,
+.sponsor .abstract-container #sponsor-form .info-area .form-group-img .inp-text,
+.sponsor .sponsor-container #abstract-form .info-area .form-group-img .inp-text,
+.sponsor .sponsor-container #sponsor-form .info-area .form-group-img .inp-text {
+  pointer-events: none;
+  word-wrap: break-word;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #414141;
+  padding-left: 3px;
+  padding-top: 3px;
+}
+.abstract .abstract-container #abstract-form .info-area .checkbox-area,
+.abstract .abstract-container #sponsor-form .info-area .checkbox-area,
+.abstract .sponsor-container #abstract-form .info-area .checkbox-area,
+.abstract .sponsor-container #sponsor-form .info-area .checkbox-area,
+.sponsor .abstract-container #abstract-form .info-area .checkbox-area,
+.sponsor .abstract-container #sponsor-form .info-area .checkbox-area,
+.sponsor .sponsor-container #abstract-form .info-area .checkbox-area,
+.sponsor .sponsor-container #sponsor-form .info-area .checkbox-area {
+  max-width: 224px;
+}
+.abstract .abstract-container #abstract-form .info-area .checkbox-area .inp-area,
+.abstract .abstract-container #sponsor-form .info-area .checkbox-area .inp-area,
+.abstract .sponsor-container #abstract-form .info-area .checkbox-area .inp-area,
+.abstract .sponsor-container #sponsor-form .info-area .checkbox-area .inp-area,
+.sponsor .abstract-container #abstract-form .info-area .checkbox-area .inp-area,
+.sponsor .abstract-container #sponsor-form .info-area .checkbox-area .inp-area,
+.sponsor .sponsor-container #abstract-form .info-area .checkbox-area .inp-area,
+.sponsor .sponsor-container #sponsor-form .info-area .checkbox-area .inp-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #1f4586;
+  outline: none;
+  padding: 0 16px;
+  color: inherit;
+}
+.abstract .abstract-container #abstract-form .info-area .checkbox-area .inp-area .check-title,
+.abstract .abstract-container #sponsor-form .info-area .checkbox-area .inp-area .check-title,
+.abstract .sponsor-container #abstract-form .info-area .checkbox-area .inp-area .check-title,
+.abstract .sponsor-container #sponsor-form .info-area .checkbox-area .inp-area .check-title,
+.sponsor .abstract-container #abstract-form .info-area .checkbox-area .inp-area .check-title,
+.sponsor .abstract-container #sponsor-form .info-area .checkbox-area .inp-area .check-title,
+.sponsor .sponsor-container #abstract-form .info-area .checkbox-area .inp-area .check-title,
+.sponsor .sponsor-container #sponsor-form .info-area .checkbox-area .inp-area .check-title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  padding: 15px 0;
+}
+.abstract .abstract-container #abstract-form .info-area .checkbox-area .inp-area input,
+.abstract .abstract-container #sponsor-form .info-area .checkbox-area .inp-area input,
+.abstract .sponsor-container #abstract-form .info-area .checkbox-area .inp-area input,
+.abstract .sponsor-container #sponsor-form .info-area .checkbox-area .inp-area input,
+.sponsor .abstract-container #abstract-form .info-area .checkbox-area .inp-area input,
+.sponsor .abstract-container #sponsor-form .info-area .checkbox-area .inp-area input,
+.sponsor .sponsor-container #abstract-form .info-area .checkbox-area .inp-area input,
+.sponsor .sponsor-container #sponsor-form .info-area .checkbox-area .inp-area input {
+  width: 18px;
+  margin: 0 16px 0 10px;
+}
+.abstract .abstract-container #abstract-form .info-area .specific-style-first,
+.abstract .abstract-container #sponsor-form .info-area .specific-style-first,
+.abstract .sponsor-container #abstract-form .info-area .specific-style-first,
+.abstract .sponsor-container #sponsor-form .info-area .specific-style-first,
+.sponsor .abstract-container #abstract-form .info-area .specific-style-first,
+.sponsor .abstract-container #sponsor-form .info-area .specific-style-first,
+.sponsor .sponsor-container #abstract-form .info-area .specific-style-first,
+.sponsor .sponsor-container #sponsor-form .info-area .specific-style-first {
+  max-width: 390px;
+}
+.abstract .abstract-container #abstract-form .info-area .specific-style-second,
+.abstract .abstract-container #sponsor-form .info-area .specific-style-second,
+.abstract .sponsor-container #abstract-form .info-area .specific-style-second,
+.abstract .sponsor-container #sponsor-form .info-area .specific-style-second,
+.sponsor .abstract-container #abstract-form .info-area .specific-style-second,
+.sponsor .abstract-container #sponsor-form .info-area .specific-style-second,
+.sponsor .sponsor-container #abstract-form .info-area .specific-style-second,
+.sponsor .sponsor-container #sponsor-form .info-area .specific-style-second {
+  max-width: 514px;
+}
+.abstract .abstract-container #abstract-form .info-area .specific-style-third,
+.abstract .abstract-container #sponsor-form .info-area .specific-style-third,
+.abstract .sponsor-container #abstract-form .info-area .specific-style-third,
+.abstract .sponsor-container #sponsor-form .info-area .specific-style-third,
+.sponsor .abstract-container #abstract-form .info-area .specific-style-third,
+.sponsor .abstract-container #sponsor-form .info-area .specific-style-third,
+.sponsor .sponsor-container #abstract-form .info-area .specific-style-third,
+.sponsor .sponsor-container #sponsor-form .info-area .specific-style-third {
+  max-width: 565px;
+}
+.abstract .abstract-container #abstract-form .info-area .text-area,
+.abstract .abstract-container #sponsor-form .info-area .text-area,
+.abstract .sponsor-container #abstract-form .info-area .text-area,
+.abstract .sponsor-container #sponsor-form .info-area .text-area,
+.sponsor .abstract-container #abstract-form .info-area .text-area,
+.sponsor .abstract-container #sponsor-form .info-area .text-area,
+.sponsor .sponsor-container #abstract-form .info-area .text-area,
+.sponsor .sponsor-container #sponsor-form .info-area .text-area {
+  max-width: 520px;
+  width: 100%;
+}
+.abstract .abstract-container #abstract-form .info-area .text-area textarea,
+.abstract .abstract-container #sponsor-form .info-area .text-area textarea,
+.abstract .sponsor-container #abstract-form .info-area .text-area textarea,
+.abstract .sponsor-container #sponsor-form .info-area .text-area textarea,
+.sponsor .abstract-container #abstract-form .info-area .text-area textarea,
+.sponsor .abstract-container #sponsor-form .info-area .text-area textarea,
+.sponsor .sponsor-container #abstract-form .info-area .text-area textarea,
+.sponsor .sponsor-container #sponsor-form .info-area .text-area textarea {
+  width: 100%;
+  height: 125px;
+  outline: none;
+  resize: none;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 19px;
+  color: #212529;
+  border-radius: 5px;
+}
+.abstract .abstract-container #abstract-form .info-area .text-area .size,
+.abstract .abstract-container #sponsor-form .info-area .text-area .size,
+.abstract .sponsor-container #abstract-form .info-area .text-area .size,
+.abstract .sponsor-container #sponsor-form .info-area .text-area .size,
+.sponsor .abstract-container #abstract-form .info-area .text-area .size,
+.sponsor .abstract-container #sponsor-form .info-area .text-area .size,
+.sponsor .sponsor-container #abstract-form .info-area .text-area .size,
+.sponsor .sponsor-container #sponsor-form .info-area .text-area .size {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: rgba(33, 37, 41, 0.7411764706);
+}
+.abstract .abstract-container #abstract-form .btn-area,
+.abstract .abstract-container #sponsor-form .btn-area,
+.abstract .sponsor-container #abstract-form .btn-area,
+.abstract .sponsor-container #sponsor-form .btn-area,
+.sponsor .abstract-container #abstract-form .btn-area,
+.sponsor .abstract-container #sponsor-form .btn-area,
+.sponsor .sponsor-container #abstract-form .btn-area,
+.sponsor .sponsor-container #sponsor-form .btn-area {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.abstract .abstract-container #abstract-form .btn-area .btn,
+.abstract .abstract-container #sponsor-form .btn-area .btn,
+.abstract .sponsor-container #abstract-form .btn-area .btn,
+.abstract .sponsor-container #sponsor-form .btn-area .btn,
+.sponsor .abstract-container #abstract-form .btn-area .btn,
+.sponsor .abstract-container #sponsor-form .btn-area .btn,
+.sponsor .sponsor-container #abstract-form .btn-area .btn,
+.sponsor .sponsor-container #sponsor-form .btn-area .btn {
+  color: #fff;
+  font-size: 20px;
+  max-width: 336px;
+  width: 100%;
+  font-weight: 500;
+  line-height: 30px;
+  padding: 14px;
+  cursor: pointer;
+  background-color: #82bd3f;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.abstract .overlay,
+.sponsor .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background-color: transparent;
+  display: none;
+}
+.abstract .overlay.isOpen,
+.sponsor .overlay.isOpen {
+  display: block;
+}
+
+.sponsor-logo .sponsor-container .logo-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #1f4586;
+  margin: 25px 0 35px;
+}
+.sponsor-logo .sponsor-container .logo-area {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+  row-gap: 32px;
+}
+.sponsor-logo .sponsor-container .logo-area .logo-card {
+  width: 30%;
+  padding: 15px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  border-radius: 7px;
+  height: 120px;
+}
+.sponsor-logo .sponsor-container .logo-area .logo-card .logo {
+  margin: 0 auto;
+  max-width: 165px;
+  width: 100%;
+  height: 100%;
+}
+.sponsor-logo .sponsor-container .logo-area .logo-card .logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  .abstract .abstract-container #abstract-form .info-area,
+  .abstract .abstract-container #sponsor-form .info-area,
+  .abstract .sponsor-container #abstract-form .info-area,
+  .abstract .sponsor-container #sponsor-form .info-area,
+  .sponsor .abstract-container #abstract-form .info-area,
+  .sponsor .abstract-container #sponsor-form .info-area,
+  .sponsor .sponsor-container #abstract-form .info-area,
+  .sponsor .sponsor-container #sponsor-form .info-area {
+    flex-wrap: wrap;
+  }
+  .abstract .abstract-container #abstract-form .info-area .form-group,
+  .abstract .abstract-container #sponsor-form .info-area .form-group,
+  .abstract .sponsor-container #abstract-form .info-area .form-group,
+  .abstract .sponsor-container #sponsor-form .info-area .form-group,
+  .sponsor .abstract-container #abstract-form .info-area .form-group,
+  .sponsor .abstract-container #sponsor-form .info-area .form-group,
+  .sponsor .sponsor-container #abstract-form .info-area .form-group,
+  .sponsor .sponsor-container #sponsor-form .info-area .form-group {
+    max-width: 263px;
+  }
+  .abstract .abstract-container #abstract-form .info-area .form-group-img input,
+  .abstract .abstract-container #sponsor-form .info-area .form-group-img input,
+  .abstract .sponsor-container #abstract-form .info-area .form-group-img input,
+  .abstract .sponsor-container #sponsor-form .info-area .form-group-img input,
+  .sponsor .abstract-container #abstract-form .info-area .form-group-img input,
+  .sponsor .abstract-container #sponsor-form .info-area .form-group-img input,
+  .sponsor .sponsor-container #abstract-form .info-area .form-group-img input,
+  .sponsor .sponsor-container #sponsor-form .info-area .form-group-img input {
+    width: 100%;
+  }
+  .abstract .abstract-container #abstract-form .info-area .specific-style-first,
+  .abstract .abstract-container #sponsor-form .info-area .specific-style-first,
+  .abstract .sponsor-container #abstract-form .info-area .specific-style-first,
+  .abstract .sponsor-container #sponsor-form .info-area .specific-style-first,
+  .sponsor .abstract-container #abstract-form .info-area .specific-style-first,
+  .sponsor .abstract-container #sponsor-form .info-area .specific-style-first,
+  .sponsor .sponsor-container #abstract-form .info-area .specific-style-first,
+  .sponsor .sponsor-container #sponsor-form .info-area .specific-style-first {
+    max-width: 390px;
+  }
+  .abstract .abstract-container #abstract-form .info-area .specific-style-second,
+  .abstract .abstract-container #sponsor-form .info-area .specific-style-second,
+  .abstract .sponsor-container #abstract-form .info-area .specific-style-second,
+  .abstract .sponsor-container #sponsor-form .info-area .specific-style-second,
+  .sponsor .abstract-container #abstract-form .info-area .specific-style-second,
+  .sponsor .abstract-container #sponsor-form .info-area .specific-style-second,
+  .sponsor .sponsor-container #abstract-form .info-area .specific-style-second,
+  .sponsor .sponsor-container #sponsor-form .info-area .specific-style-second {
+    max-width: 514px;
+  }
+  .abstract .abstract-container #abstract-form .info-area .specific-style-third,
+  .abstract .abstract-container #sponsor-form .info-area .specific-style-third,
+  .abstract .sponsor-container #abstract-form .info-area .specific-style-third,
+  .abstract .sponsor-container #sponsor-form .info-area .specific-style-third,
+  .sponsor .abstract-container #abstract-form .info-area .specific-style-third,
+  .sponsor .abstract-container #sponsor-form .info-area .specific-style-third,
+  .sponsor .sponsor-container #abstract-form .info-area .specific-style-third,
+  .sponsor .sponsor-container #sponsor-form .info-area .specific-style-third {
+    max-width: 565px;
+  }
+  .abstract .abstract-container #abstract-form .info-area .text-area,
+  .abstract .abstract-container #sponsor-form .info-area .text-area,
+  .abstract .sponsor-container #abstract-form .info-area .text-area,
+  .abstract .sponsor-container #sponsor-form .info-area .text-area,
+  .sponsor .abstract-container #abstract-form .info-area .text-area,
+  .sponsor .abstract-container #sponsor-form .info-area .text-area,
+  .sponsor .sponsor-container #abstract-form .info-area .text-area,
+  .sponsor .sponsor-container #sponsor-form .info-area .text-area {
+    max-width: 520px;
+    width: 100%;
+  }
+  .abstract .abstract-container #abstract-form .info-area .text-area textarea,
+  .abstract .abstract-container #sponsor-form .info-area .text-area textarea,
+  .abstract .sponsor-container #abstract-form .info-area .text-area textarea,
+  .abstract .sponsor-container #sponsor-form .info-area .text-area textarea,
+  .sponsor .abstract-container #abstract-form .info-area .text-area textarea,
+  .sponsor .abstract-container #sponsor-form .info-area .text-area textarea,
+  .sponsor .sponsor-container #abstract-form .info-area .text-area textarea,
+  .sponsor .sponsor-container #sponsor-form .info-area .text-area textarea {
+    width: 100%;
+    height: 125px;
+    outline: none;
+    resize: none;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #212529;
+  }
+  .abstract .abstract-container #abstract-form .info-area .text-area .size,
+  .abstract .abstract-container #sponsor-form .info-area .text-area .size,
+  .abstract .sponsor-container #abstract-form .info-area .text-area .size,
+  .abstract .sponsor-container #sponsor-form .info-area .text-area .size,
+  .sponsor .abstract-container #abstract-form .info-area .text-area .size,
+  .sponsor .abstract-container #sponsor-form .info-area .text-area .size,
+  .sponsor .sponsor-container #abstract-form .info-area .text-area .size,
+  .sponsor .sponsor-container #sponsor-form .info-area .text-area .size {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: rgba(33, 37, 41, 0.7411764706);
+  }
+  .sponsor-logo .sponsor-container .logo-area .logo-card {
+    width: 47%;
+  }
+  .sponsor .sponsor-container #sponsor-form .info-area .form-group {
+    max-width: 250px;
+  }
+}
+@media (max-width: 575px) {
+  .abstract,
+  .sponsor {
+    padding-bottom: 25px;
+  }
+  .abstract .abstract-container #abstract-form .abstract-title,
+  .abstract .abstract-container #abstract-form .sponsor-title,
+  .abstract .abstract-container #sponsor-form .abstract-title,
+  .abstract .abstract-container #sponsor-form .sponsor-title,
+  .abstract .sponsor-container #abstract-form .abstract-title,
+  .abstract .sponsor-container #abstract-form .sponsor-title,
+  .abstract .sponsor-container #sponsor-form .abstract-title,
+  .abstract .sponsor-container #sponsor-form .sponsor-title,
+  .sponsor .abstract-container #abstract-form .abstract-title,
+  .sponsor .abstract-container #abstract-form .sponsor-title,
+  .sponsor .abstract-container #sponsor-form .abstract-title,
+  .sponsor .abstract-container #sponsor-form .sponsor-title,
+  .sponsor .sponsor-container #abstract-form .abstract-title,
+  .sponsor .sponsor-container #abstract-form .sponsor-title,
+  .sponsor .sponsor-container #sponsor-form .abstract-title,
+  .sponsor .sponsor-container #sponsor-form .sponsor-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  .abstract .abstract-container #abstract-form .info-area,
+  .abstract .abstract-container #sponsor-form .info-area,
+  .abstract .sponsor-container #abstract-form .info-area,
+  .abstract .sponsor-container #sponsor-form .info-area,
+  .sponsor .abstract-container #abstract-form .info-area,
+  .sponsor .abstract-container #sponsor-form .info-area,
+  .sponsor .sponsor-container #abstract-form .info-area,
+  .sponsor .sponsor-container #sponsor-form .info-area {
+    flex-wrap: wrap;
+  }
+  .abstract .abstract-container #abstract-form .info-area .form-group,
+  .abstract .abstract-container #sponsor-form .info-area .form-group,
+  .abstract .sponsor-container #abstract-form .info-area .form-group,
+  .abstract .sponsor-container #sponsor-form .info-area .form-group,
+  .sponsor .abstract-container #abstract-form .info-area .form-group,
+  .sponsor .abstract-container #sponsor-form .info-area .form-group,
+  .sponsor .sponsor-container #abstract-form .info-area .form-group,
+  .sponsor .sponsor-container #sponsor-form .info-area .form-group {
+    max-width: 100%;
+  }
+  .abstract .abstract-container #abstract-form .info-area .form-group .select .select-list,
+  .abstract .abstract-container #sponsor-form .info-area .form-group .select .select-list,
+  .abstract .sponsor-container #abstract-form .info-area .form-group .select .select-list,
+  .abstract .sponsor-container #sponsor-form .info-area .form-group .select .select-list,
+  .sponsor .abstract-container #abstract-form .info-area .form-group .select .select-list,
+  .sponsor .abstract-container #sponsor-form .info-area .form-group .select .select-list,
+  .sponsor .sponsor-container #abstract-form .info-area .form-group .select .select-list,
+  .sponsor .sponsor-container #sponsor-form .info-area .form-group .select .select-list {
+    max-width: 100%;
+  }
+  .abstract .abstract-container #abstract-form .info-area .form-group-img input,
+  .abstract .abstract-container #sponsor-form .info-area .form-group-img input,
+  .abstract .sponsor-container #abstract-form .info-area .form-group-img input,
+  .abstract .sponsor-container #sponsor-form .info-area .form-group-img input,
+  .sponsor .abstract-container #abstract-form .info-area .form-group-img input,
+  .sponsor .abstract-container #sponsor-form .info-area .form-group-img input,
+  .sponsor .sponsor-container #abstract-form .info-area .form-group-img input,
+  .sponsor .sponsor-container #sponsor-form .info-area .form-group-img input {
+    width: 100%;
+  }
+  .abstract .abstract-container #abstract-form .info-area .checkbox-area,
+  .abstract .abstract-container #sponsor-form .info-area .checkbox-area,
+  .abstract .sponsor-container #abstract-form .info-area .checkbox-area,
+  .abstract .sponsor-container #sponsor-form .info-area .checkbox-area,
+  .sponsor .abstract-container #abstract-form .info-area .checkbox-area,
+  .sponsor .abstract-container #sponsor-form .info-area .checkbox-area,
+  .sponsor .sponsor-container #abstract-form .info-area .checkbox-area,
+  .sponsor .sponsor-container #sponsor-form .info-area .checkbox-area {
+    max-width: 224px;
+  }
+  .abstract .abstract-container #abstract-form .info-area .checkbox-area .inp-area,
+  .abstract .abstract-container #sponsor-form .info-area .checkbox-area .inp-area,
+  .abstract .sponsor-container #abstract-form .info-area .checkbox-area .inp-area,
+  .abstract .sponsor-container #sponsor-form .info-area .checkbox-area .inp-area,
+  .sponsor .abstract-container #abstract-form .info-area .checkbox-area .inp-area,
+  .sponsor .abstract-container #sponsor-form .info-area .checkbox-area .inp-area,
+  .sponsor .sponsor-container #abstract-form .info-area .checkbox-area .inp-area,
+  .sponsor .sponsor-container #sponsor-form .info-area .checkbox-area .inp-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+  .abstract .abstract-container #abstract-form .info-area .checkbox-area .inp-area input,
+  .abstract .abstract-container #sponsor-form .info-area .checkbox-area .inp-area input,
+  .abstract .sponsor-container #abstract-form .info-area .checkbox-area .inp-area input,
+  .abstract .sponsor-container #sponsor-form .info-area .checkbox-area .inp-area input,
+  .sponsor .abstract-container #abstract-form .info-area .checkbox-area .inp-area input,
+  .sponsor .abstract-container #sponsor-form .info-area .checkbox-area .inp-area input,
+  .sponsor .sponsor-container #abstract-form .info-area .checkbox-area .inp-area input,
+  .sponsor .sponsor-container #sponsor-form .info-area .checkbox-area .inp-area input {
+    width: 18px;
+    margin: 0 16px 0 10px;
+  }
+  .abstract .abstract-container #abstract-form .info-area .specific-style-first,
+  .abstract .abstract-container #sponsor-form .info-area .specific-style-first,
+  .abstract .sponsor-container #abstract-form .info-area .specific-style-first,
+  .abstract .sponsor-container #sponsor-form .info-area .specific-style-first,
+  .sponsor .abstract-container #abstract-form .info-area .specific-style-first,
+  .sponsor .abstract-container #sponsor-form .info-area .specific-style-first,
+  .sponsor .sponsor-container #abstract-form .info-area .specific-style-first,
+  .sponsor .sponsor-container #sponsor-form .info-area .specific-style-first {
+    max-width: 390px;
+  }
+  .abstract .abstract-container #abstract-form .info-area .specific-style-second,
+  .abstract .abstract-container #sponsor-form .info-area .specific-style-second,
+  .abstract .sponsor-container #abstract-form .info-area .specific-style-second,
+  .abstract .sponsor-container #sponsor-form .info-area .specific-style-second,
+  .sponsor .abstract-container #abstract-form .info-area .specific-style-second,
+  .sponsor .abstract-container #sponsor-form .info-area .specific-style-second,
+  .sponsor .sponsor-container #abstract-form .info-area .specific-style-second,
+  .sponsor .sponsor-container #sponsor-form .info-area .specific-style-second {
+    max-width: 514px;
+  }
+  .abstract .abstract-container #abstract-form .info-area .specific-style-third,
+  .abstract .abstract-container #sponsor-form .info-area .specific-style-third,
+  .abstract .sponsor-container #abstract-form .info-area .specific-style-third,
+  .abstract .sponsor-container #sponsor-form .info-area .specific-style-third,
+  .sponsor .abstract-container #abstract-form .info-area .specific-style-third,
+  .sponsor .abstract-container #sponsor-form .info-area .specific-style-third,
+  .sponsor .sponsor-container #abstract-form .info-area .specific-style-third,
+  .sponsor .sponsor-container #sponsor-form .info-area .specific-style-third {
+    max-width: 565px;
+  }
+  .abstract .abstract-container #abstract-form .info-area .text-area,
+  .abstract .abstract-container #sponsor-form .info-area .text-area,
+  .abstract .sponsor-container #abstract-form .info-area .text-area,
+  .abstract .sponsor-container #sponsor-form .info-area .text-area,
+  .sponsor .abstract-container #abstract-form .info-area .text-area,
+  .sponsor .abstract-container #sponsor-form .info-area .text-area,
+  .sponsor .sponsor-container #abstract-form .info-area .text-area,
+  .sponsor .sponsor-container #sponsor-form .info-area .text-area {
+    max-width: 520px;
+    width: 100%;
+  }
+  .abstract .abstract-container #abstract-form .info-area .text-area textarea,
+  .abstract .abstract-container #sponsor-form .info-area .text-area textarea,
+  .abstract .sponsor-container #abstract-form .info-area .text-area textarea,
+  .abstract .sponsor-container #sponsor-form .info-area .text-area textarea,
+  .sponsor .abstract-container #abstract-form .info-area .text-area textarea,
+  .sponsor .abstract-container #sponsor-form .info-area .text-area textarea,
+  .sponsor .sponsor-container #abstract-form .info-area .text-area textarea,
+  .sponsor .sponsor-container #sponsor-form .info-area .text-area textarea {
+    width: 100%;
+    height: 125px;
+    outline: none;
+    resize: none;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #212529;
+  }
+  .abstract .abstract-container #abstract-form .info-area .text-area .size,
+  .abstract .abstract-container #sponsor-form .info-area .text-area .size,
+  .abstract .sponsor-container #abstract-form .info-area .text-area .size,
+  .abstract .sponsor-container #sponsor-form .info-area .text-area .size,
+  .sponsor .abstract-container #abstract-form .info-area .text-area .size,
+  .sponsor .abstract-container #sponsor-form .info-area .text-area .size,
+  .sponsor .sponsor-container #abstract-form .info-area .text-area .size,
+  .sponsor .sponsor-container #sponsor-form .info-area .text-area .size {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    color: rgba(33, 37, 41, 0.7411764706);
+  }
+  .abstract .abstract-container #abstract-form .btn-area .btn,
+  .abstract .abstract-container #sponsor-form .btn-area .btn,
+  .abstract .sponsor-container #abstract-form .btn-area .btn,
+  .abstract .sponsor-container #sponsor-form .btn-area .btn,
+  .sponsor .abstract-container #abstract-form .btn-area .btn,
+  .sponsor .abstract-container #sponsor-form .btn-area .btn,
+  .sponsor .sponsor-container #abstract-form .btn-area .btn,
+  .sponsor .sponsor-container #sponsor-form .btn-area .btn {
+    max-width: 100%;
+  }
+  .sponsor-logo .sponsor-container .logo-title {
+    font-size: 22px;
+    line-height: 26px;
+    margin: 15px 0 25px;
+  }
+  .sponsor-logo .sponsor-container .logo-area {
+    row-gap: 20px;
+  }
+  .sponsor-logo .sponsor-container .logo-area .logo-card {
+    width: 100%;
+  }
+}
+.log-in-out {
+  width: 100%;
+  min-height: 85vh;
+  height: 100%;
+  margin: 10px 0;
+}
+.log-in-out .row {
+  width: 100%;
+  min-height: 85vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.log-in-out .form-area {
+  max-width: 500px;
+  width: 100%;
+  padding: 40px 56px;
+  margin: 0 10px;
+  border: 1px solid rgba(102, 102, 102, 0.5019607843);
+  border-radius: 24px;
+}
+.log-in-out .form-area .title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  color: #333333;
+}
+.log-in-out .form-area .text {
+  color: #333333;
+  font-size: 13px;
+  line-height: 19px;
+}
+.log-in-out .form-area .text a {
+  color: #1f4586;
+  text-decoration: underline;
+}
+.log-in-out .form-area .form-sing-in-out {
+  padding-top: 13px;
+}
+.log-in-out .form-area .form-sing-in-out .error-message {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  color: #ff3d71;
+  padding: 3px;
+}
+.log-in-out .form-area .form-sing-in-out .inp-area {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.log-in-out .form-area .form-sing-in-out .form-group {
+  margin-top: 19px;
+}
+.log-in-out .form-area .form-sing-in-out .form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  color: #666666;
+}
+.log-in-out .form-area .form-sing-in-out .form-group input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid rgba(102, 102, 102, 0.3490196078);
+  border-radius: 10px;
+  padding: 0 10px;
+  outline: none;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+.log-in-out .form-area .form-sing-in-out .form-group input::-moz-placeholder {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #c3c3c3;
+}
+.log-in-out .form-area .form-sing-in-out .form-group input::placeholder {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #c3c3c3;
+}
+.log-in-out .form-area .form-sing-in-out .form-group input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.log-in-out .form-area .form-sing-in-out .otp-area {
+  padding: 32px 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 19px;
+}
+.log-in-out .form-area .form-sing-in-out .otp-area .timer {
+  color: #0046ac;
+  display: block;
+}
+.log-in-out .form-area .form-sing-in-out .otp-area .otp-text {
+  color: #001d48;
+  font-weight: 600;
+  margin: 3px 0;
+}
+.log-in-out .form-area .form-sing-in-out .otp-area .otp-text .message-link {
+  display: inline-block;
+  padding: 0 2px;
+  word-wrap: break-word;
+  color: #0046ac;
+}
+.log-in-out .form-area .form-sing-in-out .otp-area .send-otp {
+  display: block;
+  color: #0046ac;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.log-in-out .form-area .form-sing-in-out .forget-link {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #666666;
+  padding: 3px;
+  text-decoration: underline;
+}
+.log-in-out .form-area .form-sing-in-out .visible-password {
+  margin: 32px 0;
+  display: flex;
+  align-items: center;
+}
+.log-in-out .form-area .form-sing-in-out .visible-password label {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #333333;
+}
+.log-in-out .form-area .form-sing-in-out .visible-password input {
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  accent-color: #000;
+}
+.log-in-out .form-area .form-sing-in-out .btn {
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: center;
+  background-color: #1f4586;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 26px;
+}
+.log-in-out .form-area .form-sing-in-out .otp-message-btn {
+  margin-top: 24px;
+}
+
+@media (max-width: 520px) {
+  .log-in-out .form-area {
+    padding: 15px;
+    border-color: transparent;
+  }
+  .log-in-out .form-area .title {
+    font-size: 24px;
+  }
+  .log-in-out .form-area .text {
+    font-size: 14px;
+  }
+  .log-in-out .form-area .form-sing-in-out {
+    padding-top: 0;
+  }
+  .log-in-out .form-area .form-sing-in-out .inp-area {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .log-in-out .form-area .form-sing-in-out .inp-area .form-group {
+    width: 100%;
+  }
+  .log-in-out .form-area .form-sing-in-out .form-group {
+    margin-top: 15px;
+  }
+  .log-in-out .form-area .form-sing-in-out .form-group label {
+    font-size: 12px;
+  }
+  .log-in-out .form-area .form-sing-in-out .form-group input {
+    height: 40px;
+  }
+  .log-in-out .form-area .form-sing-in-out .visible-password {
+    margin: 15px 0;
+  }
+  .log-in-out .form-area .form-sing-in-out .visible-password label {
+    font-size: 14px;
+  }
+}
+.register-card {
+  padding: 25px 0;
+  min-height: 60vh;
+  height: 100%;
+}
+.register-card .register-pocket-container .register-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  color: #000;
+  margin-bottom: 10px;
+}
+.register-card .register-pocket-container .card-box {
+  width: 100%;
+  display: flex;
+  gap: 3%;
+  row-gap: 37px;
+  flex-wrap: wrap;
+}
+.register-card .register-pocket-container .card-box .register-card-area {
+  width: 30.9%;
+}
+.register-card .register-pocket-container .card-box .register-card-area .top {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.register-card .register-pocket-container .card-box .register-card-area .top img {
+  width: 100%;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .title {
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 21px;
+  margin-top: 11px;
+  font-size: 16px;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .time span,
+.register-card .register-pocket-container .card-box .register-card-area .bottom .location span {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #000;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select-group .select-title {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #000;
+  display: inline-block;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #1f4586;
+  padding: 0 13px;
+  margin: 4px 0 10px;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select .text {
+  width: 100%;
+  display: inline-block;
+  word-wrap: break-word;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select .price {
+  width: 77px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select .select-text {
+  color: #414141;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  width: 100%;
+  height: 100%;
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select .select-text .text {
+  max-width: 180px;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select .select-text .info {
+  display: flex;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select dl,
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select ol,
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select .select-list {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  max-width: 336px;
+  width: 100%;
+  overflow-y: scroll;
+  border-radius: 10px;
+  border: 1px solid #1f4586;
+  background-color: #fff;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition: 0.3s ease;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select .select-list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select .select-list::-webkit-scrollbar {
+  width: 3px;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select .select-list::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #757575;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select .select-list::-webkit-scrollbar-track-piece:end {
+  margin-bottom: 15px;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select .select-list::-webkit-scrollbar-track-piece:start {
+  margin-top: 15px;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select .select-list.active-select {
+  height: 176px;
+  opacity: 1;
+  visibility: visible;
+  z-index: 999;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select .select-list li {
+  padding: 14px 12px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #414141;
+  transition: 0.3 ease;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select .select-list li .text {
+  max-width: 245px;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select .select-list li:hover {
+  background-color: #ebebeb;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .select .select-list li.active-item {
+  background-color: #ebebeb;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .btn-area {
+  width: 100%;
+  text-align: right;
+}
+.register-card .register-pocket-container .card-box .register-card-area .bottom .btn-area .btn {
+  cursor: pointer;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  max-width: 126px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #1f4586;
+  padding: 7px;
+  outline: none;
+  border-color: transparent;
+}
+.register-card .register-pocket-container .card-box .abstract .bottom .btn-area {
+  margin-top: 12px;
+}
+.register-card .register-pocket-container .card-box .abstract .bottom .btn-area .btn {
+  max-width: 185px;
+  background-color: #82bd3f;
+}
+.register-card .register-pocket-container .profile {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.register-card .register-pocket-container .profile button {
+  max-width: 94px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin: 0 5px;
+  color: #fff;
+}
+.register-card .register-pocket-container .profile .profileBtn {
+  background-color: #1f4586;
+}
+.register-card .register-pocket-container .profile .exitBtn {
+  background-color: #ee1d52;
+}
+.register-card .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background-color: transparent;
+  display: none;
+}
+.register-card .overlay.isOpen {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .register-card .register-pocket-container .card-box {
+    gap: 4%;
+    row-gap: 37px;
+  }
+  .register-card .register-pocket-container .card-box .register-card-area {
+    width: 46%;
+  }
+  .register-card .register-pocket-container .card-box .register-card-area .bottom .title {
+    line-height: 24px;
+    margin-top: 5px;
+  }
+  .register-card .register-pocket-container .card-box .register-card-area .bottom .time span,
+  .register-card .register-pocket-container .card-box .register-card-area .bottom .location span {
+    line-height: 21px;
+  }
+  .register-card .register-pocket-container .card-box .register-card-area .bottom .btn-area .btn {
+    font-size: 14px;
+    line-height: 21px;
+    padding: 8px;
+  }
+}
+@media (max-width: 575px) {
+  .register-card .register-pocket-container .card-box .register-card-area {
+    width: 100%;
+  }
+  .register-card .register-pocket-container .card-box .register-card-area .bottom .select-group .select .select-list {
+    max-width: 100%;
+  }
+}
+.contact {
+  width: 100%;
+  min-height: 80vh;
+}
+.contact .info {
+  width: 100%;
+  background-color: rgba(114, 137, 178, 0.368627451);
+}
+.contact .info .contact-container .title {
+  color: #292d32;
+  padding: 17px 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.contact .contact-container .row {
+  width: 100%;
+  display: flex;
+  gap: 4%;
+  padding: 120px 0;
+}
+.contact .contact-container .row .contact-card {
+  width: 31%;
+  text-align: center;
+}
+.contact .contact-container .row .contact-card .top {
+  max-width: 114px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+}
+.contact .contact-container .row .contact-card .top img {
+  width: 100%;
+}
+.contact .contact-container .row .contact-card .bottom {
+  padding-top: 17px;
+}
+.contact .contact-container .row .contact-card .bottom .link-list .link-item {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  word-wrap: break-word;
+  color: #001d48;
+}
+.contact .contact-container .row .contact-card .bottom .link-list .link-item a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+@media (max-width: 575px) {
+  .contact {
+    min-height: 50vh;
+  }
+  .contact .info .contact-container .title {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .contact .contact-container .row {
+    align-items: center;
+    flex-direction: column;
+    row-gap: 15px;
+    padding: 22px 0;
+  }
+  .contact .contact-container .row .contact-card {
+    width: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */

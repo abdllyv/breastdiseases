@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/scss/main.css" />
+  </head>
+  <body>
+    <main>
+      <section class="log-in-out">
+        <div class="row">
+          <div class="form-area">
+            <h4 class="title">Qeydiyyatdan keç</h4>
+            <p class="text">Hesabınız var? <a href="">Daxil ol </a></p>
+            <form class="form-sing-in-out" id="register">
+              <div class="inp-area">
+                <div class="form-group">
+                  <label for="register-name">Ad</label>
+                  <input
+                    type="text"
+                    name="name"
+                    class="inp"
+                    id="register-name"
+                    autocomplete="on"
+                  />
+                  <div id="register-name-error" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                  <label for="register-surname">Soyad</label>
+                  <input
+                    type="text"
+                    name="surname"
+                    class="inp"
+                    id="register-surname"
+                  />
+                  <div id="register-surname-error" class="error-message"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="register-email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="inp"
+                  id="register-email"
+                  autocomplete="on"
+                />
+                <div id="register-email-error" class="error-message"></div>
+              </div>
+              <div class="form-group">
+                <label for="register-phone">Mobil nömrə</label>
+                <input
+                  type="number"
+                  name="phone"
+                  class="inp"
+                  id="register-phone"
+                  placeholder="+994 XX XXX XX XX"
+                  autocomplete="of"
+                />
+                <div id="register-phone-error" class="error-message"></div>
+              </div>
+              <div class="form-group">
+                <label for="register-private-info">Şəxsiyyət vəsiqəsi</label>
+                <input
+                  type="text"
+                  name="private-info"
+                  class="inp"
+                  id="register-private-info"
+                  autocomplete="off"
+                />
+                <div
+                  id="register-private-info-error"
+                  class="error-message"
+                ></div>
+              </div>
+              <div class="inp-area">
+                <div class="form-group">
+                  <label for="register-password">Şifrə</label>
+                  <input
+                    type="password"
+                    name="password"
+                    class="inp password"
+                    id="register-password"
+                    autocomplete="off"
+                  />
+                  <div id="register-password-error" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                  <label for="register-repassword"> Şifrənin təkrarı</label>
+                  <input
+                    type="password"
+                    name="repassword"
+                    class="inp password"
+                    id="register-repassword"
+                    autocomplete="off"
+                  />
+                  <div
+                    id="register-repassword-error"
+                    class="error-message"
+                  ></div>
+                </div>
+              </div>
+              <div
+                id="register-same-passwood-error"
+                class="error-message"
+              ></div>
+              <div class="visible-password">
+                <input type="checkbox" name="checkbox" id="register-checkbox" />
+                <label for="register-checkbox">Şifrəni göstər</label>
+              </div>
+              <button class="btn">Daxil ol</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/register.js"></script>
+  </body>
+</html>

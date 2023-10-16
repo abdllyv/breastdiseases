@@ -1,5 +1,5 @@
 /* ----------------------- Desktop Dropdown Open Close ---------------------- */
-let dropdown = document.querySelectorAll(".dropdown");
+let dropdown = document.querySelectorAll(".dropdown-desktop");
 let overlay = document.querySelector(".overlay");
 // open
 for (let i = 0; i < dropdown.length; i++) {

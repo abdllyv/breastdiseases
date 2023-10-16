@@ -8,9 +8,9 @@
   </head>
   <body>
     <main>
-      <section class="abstract">
+      <section class="abstract" id="main-abstract">
         <div class="abstract-container">
-          <form action="" id="abstract-form">
+          <form id="abstract-form">
             <h3 class="abstract-title">Məlumatlarınızı qeyd edin</h3>
             <div class="info-area">
               <div class="form-group">
@@ -168,30 +168,84 @@
                 </div>
               </div>
             </div>
+            <div class="info-area">
+              <div class="form-group">
+                <label for="coment"> Şərh üçün*</label>
+                <input
+                  type="text"
+                  name="coment"
+                  id="coment"
+                  autocomplete="on"
+                />
+                <div id="coment-error" class="error-message"></div>
+              </div>
+            </div>
             <h3 class="abstract-title">Məlumatlarınızı qeyd edin</h3>
             <div class="info-area">
+              <div class="form-group">
+                <div class="select-label">Təqdimi mən edəcəm*</div>
+                <div class="select">
+                  <span
+                    onclick="openSelect(event, 'production')"
+                    class="select-title"
+                    ><span class="text" id="select-five-text">Seç</span>
+                    <div class="icon">
+                      <svg
+                        width="17"
+                        height="9"
+                        viewBox="0 0 17 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15.3785 1.62158L9.37031 7.62973C8.92701 8.07303 8.20828 8.07303 7.76499 7.62973L1.75684 1.62158"
+                          stroke="#414141"
+                          stroke-width="1.7027"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+                  <ul class="select-list" id="production">
+                    <li class="select-item">Mən</li>
+                    <li class="select-item">Başqası</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="personal-name"> Müəllifin tam adı*</label>
+                <input
+                  type="text"
+                  name="name"
+                  class="personal-check"
+                  id="main-personal-name"
+                  autocomplete="on"
+                />
+                <div id="main-personal-name-error" class="error-message"></div>
+              </div>
               <div class="form-group">
                 <label for="personal-name"> Ad*</label>
                 <input
                   type="text"
                   name="name"
                   id="personal-name"
+                  class="personal-check"
                   autocomplete="on"
                 />
                 <div id="personal-name-error" class="error-message"></div>
               </div>
+            </div>
+            <div class="info-area">
               <div class="form-group">
                 <label for="personal-surname"> Soyad adı*</label>
-                <input type="text" name="surname" id="personal-surname" />
+                <input type="text" name="surname" id="personal-surname"   class="personal-check" />
                 <div id="personal-surname-error" class="error-message"></div>
               </div>
               <div class="form-group">
                 <label for="father-name">Ata Adı*</label>
-                <input type="text" name="father-name" id="father-name" />
+                <input type="text" name="father-name" id="father-name"    class="personal-check"/>
                 <div id="father-name-error" class="error-message"></div>
               </div>
-            </div>
-            <div class="info-area">
               <div class="form-group">
                 <label for="country"> Ölkə*</label>
                 <input
@@ -199,31 +253,87 @@
                   name="country"
                   id="country"
                   autocomplete="on"
+                  class="personal-check"
                 />
                 <div id="country-error" class="error-message"></div>
-              </div>
-              <div class="form-group">
-                <label for="town"> Şəhər*</label>
-                <input type="text" name="town" id="town" />
-                <div id="town-error" class="error-message"></div>
-              </div>
-              <div class="form-group">
-                <label for="email"> E-Poçt ünvanı*</label>
-                <input type="email" name="email" id="email" autocomplete="on" />
-                <div id="email-error" class="error-message"></div>
               </div>
             </div>
             <div class="info-area">
               <div class="form-group">
+                <label for="town"> Şəhər*</label>
+                <input type="text" name="town" id="town"   class="personal-check" />
+                <div id="town-error" class="error-message"></div>
+              </div>
+              <div class="form-group">
+                <label for="email"> E-Poçt ünvanı*</label>
+                <input type="email" name="email" id="email" autocomplete="on"   class="personal-check" />
+                <div id="email-error" class="error-message"></div>
+              </div>
+              <div class="form-group">
                 <label for="company-name"> Təmsil etdiyiniz müəssisə*</label>
-                <input type="text" name="company-name" id="company-name" />
+                <input type="text" name="company-name" id="company-name"   class="personal-check" />
                 <div id="company-name-error" class="error-message"></div>
+              </div>
+            </div>
+            <div class="btn-personal">
+              <span class="personal-add" id="personal-add">Əlavə et</span>
+            </div>
+
+            <div class="personal-area" >
+              <div class="rowww" id="personal-area">
+                <!-- <div class="personal-card">
+                  <ul class="personal-list">
+                    <li class="personales">
+                      <div class="title">Təqdimi mən edəcəm</div>
+                      <p class="text">Men</p>
+                    </li>
+                    <li class="personales">
+                      <div class="title">Müəllifin tam adı</div>
+                      <p class="text">Men</p>
+                    </li>
+                    <li class="personales">
+                      <div class="title">Ad</div>
+                      <p class="text">Men</p>
+                    </li>
+                    <li class="personales">
+                      <div class="title">Soyad</div>
+                      <p class="text">Men</p>
+                    </li>
+                    <li class="personales">
+                      <div class="title">Ata adı</div>
+                      <p class="text">Men</p>
+                    </li>
+                    <li class="personales">
+                      <div class="title">Ölkə</div>
+                      <p class="text">Men</p>
+                    </li>
+                    <li class="personales">
+                      <div class="title">Şəhər</div>
+                      <p class="text">Men</p>
+                    </li>
+                    <li class="personales">
+                      <div class="title">E-Poçt ünvanı</div>
+                      <p class="text">Men</p>
+                    </li>
+                    <li class="personales">
+                      <div class="title">Fəaliyyət</div>
+                      <p class="text">
+                        <span class="delete">Sil</span>
+                      </p>
+                    </li>
+                  </ul>
+                </div> -->
               </div>
             </div>
             <div class="info-area">
               <div class="form-group text-area">
                 <label for="summary"> Xülasə</label>
-                <textarea name="summary" id="summary" maxlength="100" rows="5"></textarea>
+                <textarea
+                  name="summary"
+                  id="summary"
+                  maxlength="100"
+                  rows="5"
+                ></textarea>
                 <span class="size"
                   ><span class="resize"></span>|
                   <span class="max-size">100</span>
@@ -247,7 +357,12 @@
             <div class="info-area">
               <div class="form-group text-area">
                 <label for="results"> Nəticələr</label>
-                <textarea name="results" id="results" maxlength="300"  rows="5"></textarea>
+                <textarea
+                  name="results"
+                  id="results"
+                  maxlength="300"
+                  rows="5"
+                ></textarea>
                 <span class="size"
                   ><span class="resize"></span>|<span class="max-size"
                     >300</span
@@ -256,7 +371,12 @@
               </div>
               <div class="form-group text-area">
                 <label for="discussion"> Müzakirə</label>
-                <textarea name="discussion" id="discussion"  maxlength="300" rows="5"></textarea>
+                <textarea
+                  name="discussion"
+                  id="discussion"
+                  maxlength="300"
+                  rows="5"
+                ></textarea>
                 <span class="size"
                   ><span class="resize"></span>|<span class="max-size"
                     >300</span
@@ -343,19 +463,322 @@
               </div>
             </div>
             <div class="btn-area">
-              <button class="btn">Göndər</button>
+              <button class="btn" type="submit" id="btnSend">Göndər</button>
+              <button class="btn" type="submit" id="btnSave">
+                Qaralama olaraq saxla
+              </button>
+              <span class="btn" id="history-abstract-btn"
+                >Qaralama siyahısı</span
+              >
+              <span class="btn">Önizləmə</span>
             </div>
           </form>
+          <div class="abstract-history">
+            <div class="abstract-history-container">
+              <table class="history-table">
+                <caption class="history-title">
+                  Qaralama siyahısı
+                </caption>
+                <thead class="table-head">
+                  <tr>
+                    <th scope="col">Firstname</th>
+                    <th scope="col">Lastname</th>
+                    <th scope="col">E-poçt</th>
+                    <th scope="col">Firstname Init</th>
+                    <th scope="col">Edit</th>
+                  </tr>
+                </thead>
+                <tbody class="table-body">
+                  <tr>
+                    <td scope="row" data-label="Firstname">Sadiq</td>
+                    <td data-label="Lastname">Abdullayev</td>
+                    <td data-label="E-poçt " class="email">
+                      sadiq.abdullayev1903@..
+                    </td>
+                    <td data-label="Firstname Init">Men</td>
+                    <td data-label="Edit">
+                      <div class="edit-area">
+                        <div class="edit-icon">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M14.8066 5.65942L18.4661 9.31888L7.48773 20.2972L3.82828 20.2972L3.82828 16.6378L14.8066 5.65942Z"
+                              fill="#5C545E"
+                            />
+                            <path
+                              d="M18.4668 2L22.1263 5.65945L19.1987 8.58702L17.369 6.75729L15.5392 4.92756L18.4668 2Z"
+                              fill="#5C545E"
+                            />
+                          </svg>
+                        </div>
+                        <div class="delete-icon">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              x="6.1875"
+                              y="8.33337"
+                              width="11.875"
+                              height="12.6667"
+                              rx="1"
+                              fill="#5C545E"
+                            />
+                            <path
+                              d="M5.10011 4.39455C5.04933 4.19442 5.20058 4 5.40705 4H18.8429C19.0494 4 19.2007 4.19442 19.1499 4.39455L18.5189 6.88122C18.4833 7.02166 18.3569 7.12 18.212 7.12H6.03802C5.89313 7.12 5.76671 7.02166 5.73108 6.88122L5.10011 4.39455Z"
+                              fill="#5C545E"
+                            />
+                            <path
+                              d="M10.541 2.31667C10.541 2.14178 10.6828 2 10.8577 2H13.391C13.5659 2 13.7077 2.14178 13.7077 2.31667V3.58333H10.541V2.31667Z"
+                              fill="#5C545E"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row" data-label="Firstname">Sadiq</td>
+                    <td data-label="Lastname">Abdullayev</td>
+                    <td data-label="E-poçt">sadiq.abdullayev1903@..</td>
+                    <td data-label="Firstname Init">Men</td>
+                    <td data-label="Edit">
+                      <div class="edit-area">
+                        <div class="edit-icon">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M14.8066 5.65942L18.4661 9.31888L7.48773 20.2972L3.82828 20.2972L3.82828 16.6378L14.8066 5.65942Z"
+                              fill="#5C545E"
+                            />
+                            <path
+                              d="M18.4668 2L22.1263 5.65945L19.1987 8.58702L17.369 6.75729L15.5392 4.92756L18.4668 2Z"
+                              fill="#5C545E"
+                            />
+                          </svg>
+                        </div>
+                        <div class="delete-icon">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              x="6.1875"
+                              y="8.33337"
+                              width="11.875"
+                              height="12.6667"
+                              rx="1"
+                              fill="#5C545E"
+                            />
+                            <path
+                              d="M5.10011 4.39455C5.04933 4.19442 5.20058 4 5.40705 4H18.8429C19.0494 4 19.2007 4.19442 19.1499 4.39455L18.5189 6.88122C18.4833 7.02166 18.3569 7.12 18.212 7.12H6.03802C5.89313 7.12 5.76671 7.02166 5.73108 6.88122L5.10011 4.39455Z"
+                              fill="#5C545E"
+                            />
+                            <path
+                              d="M10.541 2.31667C10.541 2.14178 10.6828 2 10.8577 2H13.391C13.5659 2 13.7077 2.14178 13.7077 2.31667V3.58333H10.541V2.31667Z"
+                              fill="#5C545E"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row" data-label="Firstname">Sadiq</td>
+                    <td data-label="Lastname">Abdullayev</td>
+                    <td data-label="E-poçt">sadiq.abdullayev1903@..</td>
+                    <td data-label="Firstname Init">Men</td>
+                    <td data-label="Edit">
+                      <div class="edit-area">
+                        <div class="edit-icon">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M14.8066 5.65942L18.4661 9.31888L7.48773 20.2972L3.82828 20.2972L3.82828 16.6378L14.8066 5.65942Z"
+                              fill="#5C545E"
+                            />
+                            <path
+                              d="M18.4668 2L22.1263 5.65945L19.1987 8.58702L17.369 6.75729L15.5392 4.92756L18.4668 2Z"
+                              fill="#5C545E"
+                            />
+                          </svg>
+                        </div>
+                        <div class="delete-icon">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              x="6.1875"
+                              y="8.33337"
+                              width="11.875"
+                              height="12.6667"
+                              rx="1"
+                              fill="#5C545E"
+                            />
+                            <path
+                              d="M5.10011 4.39455C5.04933 4.19442 5.20058 4 5.40705 4H18.8429C19.0494 4 19.2007 4.19442 19.1499 4.39455L18.5189 6.88122C18.4833 7.02166 18.3569 7.12 18.212 7.12H6.03802C5.89313 7.12 5.76671 7.02166 5.73108 6.88122L5.10011 4.39455Z"
+                              fill="#5C545E"
+                            />
+                            <path
+                              d="M10.541 2.31667C10.541 2.14178 10.6828 2 10.8577 2H13.391C13.5659 2 13.7077 2.14178 13.7077 2.31667V3.58333H10.541V2.31667Z"
+                              fill="#5C545E"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row" data-label="Firstname">Sadiq</td>
+                    <td data-label="Lastname">Abdullayev</td>
+                    <td data-label="E-poçt">sadiq.abdullayev1903@..</td>
+                    <td data-label="Firstname Init">Men</td>
+                    <td data-label="Edit">
+                      <div class="edit-area">
+                        <div class="edit-icon">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M14.8066 5.65942L18.4661 9.31888L7.48773 20.2972L3.82828 20.2972L3.82828 16.6378L14.8066 5.65942Z"
+                              fill="#5C545E"
+                            />
+                            <path
+                              d="M18.4668 2L22.1263 5.65945L19.1987 8.58702L17.369 6.75729L15.5392 4.92756L18.4668 2Z"
+                              fill="#5C545E"
+                            />
+                          </svg>
+                        </div>
+                        <div class="delete-icon">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              x="6.1875"
+                              y="8.33337"
+                              width="11.875"
+                              height="12.6667"
+                              rx="1"
+                              fill="#5C545E"
+                            />
+                            <path
+                              d="M5.10011 4.39455C5.04933 4.19442 5.20058 4 5.40705 4H18.8429C19.0494 4 19.2007 4.19442 19.1499 4.39455L18.5189 6.88122C18.4833 7.02166 18.3569 7.12 18.212 7.12H6.03802C5.89313 7.12 5.76671 7.02166 5.73108 6.88122L5.10011 4.39455Z"
+                              fill="#5C545E"
+                            />
+                            <path
+                              d="M10.541 2.31667C10.541 2.14178 10.6828 2 10.8577 2H13.391C13.5659 2 13.7077 2.14178 13.7077 2.31667V3.58333H10.541V2.31667Z"
+                              fill="#5C545E"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row" data-label="Firstname">Sadiq</td>
+                    <td data-label="Lastname">Abdullayev</td>
+                    <td data-label="E-poçt">sadiq.abdullayev1903@..</td>
+                    <td data-label="Firstname Init">Men</td>
+                    <td data-label="Edit">
+                      <div class="edit-area">
+                        <div class="edit-icon">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M14.8066 5.65942L18.4661 9.31888L7.48773 20.2972L3.82828 20.2972L3.82828 16.6378L14.8066 5.65942Z"
+                              fill="#5C545E"
+                            />
+                            <path
+                              d="M18.4668 2L22.1263 5.65945L19.1987 8.58702L17.369 6.75729L15.5392 4.92756L18.4668 2Z"
+                              fill="#5C545E"
+                            />
+                          </svg>
+                        </div>
+                        <div class="delete-icon">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              x="6.1875"
+                              y="8.33337"
+                              width="11.875"
+                              height="12.6667"
+                              rx="1"
+                              fill="#5C545E"
+                            />
+                            <path
+                              d="M5.10011 4.39455C5.04933 4.19442 5.20058 4 5.40705 4H18.8429C19.0494 4 19.2007 4.19442 19.1499 4.39455L18.5189 6.88122C18.4833 7.02166 18.3569 7.12 18.212 7.12H6.03802C5.89313 7.12 5.76671 7.02166 5.73108 6.88122L5.10011 4.39455Z"
+                              fill="#5C545E"
+                            />
+                            <path
+                              d="M10.541 2.31667C10.541 2.14178 10.6828 2 10.8577 2H13.391C13.5659 2 13.7077 2.14178 13.7077 2.31667V3.58333H10.541V2.31667Z"
+                              fill="#5C545E"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="btn-area">
+                <span id="close-history-btn">Geri</span>
+              </div>
+            </div>
+            <div class="history-overlay"></div>
+          </div>
         </div>
         <div class="overlay"></div>
       </section>
     </main>
-      <!-- SweetAlert -->
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-      <!-- SweetAlert -->
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- SweetAlert -->
 
-      <!-- My JS -->
-      <script src="./assets/js/abstract.js"></script>
-      <!-- My JS -->
+    <!-- My JS -->
+    <script src="./assets/js/abstract.js"></script>
+    <!-- My JS -->
   </body>
 </html>

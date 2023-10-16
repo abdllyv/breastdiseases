@@ -1,5 +1,13 @@
 .header {
   width: 100%;
+  dl,
+  ol,
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+
   .header-container {
     .top {
       width: 100%;
@@ -46,7 +54,7 @@
     width: 100%;
     background-color: #1f4586;
     .header-container {
-      .row {
+      .rowww {
         width: 100%;
         display: flex;
         align-items: center;
@@ -81,6 +89,7 @@
                 display: inline-block;
                 color: #fff;
                 padding: 22px 10px;
+                text-decoration: none;
                 &.active {
                   background-color: #82bd3f;
                 }
@@ -123,6 +132,7 @@
                     font-size: 16px;
                     line-height: 16px;
                     width: 138px;
+                    text-decoration: none;
                   }
                 }
               }
@@ -215,6 +225,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            text-decoration: none;
             img {
               width: 25px;
               height: auto;
@@ -239,6 +250,11 @@
           height: 72px;
           transform: scaleY(1);
           transform-origin: top center;
+        }
+        .mobile-item{
+          a{
+            text-decoration: none;
+          }
         }
       }
       .btn {
@@ -301,7 +317,7 @@
       height: 64px;
       background-color: #1f4586;
       .header-container {
-        .row {
+        .rowww {
           .logo {
             display: block;
           }

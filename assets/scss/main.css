@@ -14,7 +14,8 @@
 .register-pocket-container,
 .contact-container,
 .header-container,
-.footer-container {
+.footer-container,
+.abstract-history-container {
   max-width: 1112px;
   width: 100%;
   margin: 0 auto;
@@ -24,6 +25,13 @@
 /* ------------------------------- components ------------------------------- */
 .header {
   width: 100%;
+}
+.header dl,
+.header ol,
+.header ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 .header .header-container .top {
   width: 100%;
@@ -67,34 +75,34 @@
   width: 100%;
   background-color: #1f4586;
 }
-.header .bottom .header-container .row {
+.header .bottom .header-container .rowww {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.header .bottom .header-container .row .logo {
+.header .bottom .header-container .rowww .logo {
   display: none;
   max-width: 32px;
   width: 100%;
   margin: 16px 0;
 }
-.header .bottom .header-container .row .logo img {
+.header .bottom .header-container .rowww .logo img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.header .bottom .header-container .row .nav-bar {
+.header .bottom .header-container .rowww .nav-bar {
   width: 100%;
 }
-.header .bottom .header-container .row .nav-bar .nav-list {
+.header .bottom .header-container .rowww .nav-bar .nav-list {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.header .bottom .header-container .row .nav-bar .nav-list .nav-item {
+.header .bottom .header-container .rowww .nav-bar .nav-list .nav-item {
   font-size: 12px;
   line-height: 12px;
   color: #fff;
@@ -103,22 +111,23 @@
   cursor: pointer;
   position: relative;
 }
-.header .bottom .header-container .row .nav-bar .nav-list .nav-item a {
+.header .bottom .header-container .rowww .nav-bar .nav-list .nav-item a {
   display: inline-block;
   color: #fff;
   padding: 22px 10px;
+  text-decoration: none;
 }
-.header .bottom .header-container .row .nav-bar .nav-list .nav-item a.active {
+.header .bottom .header-container .rowww .nav-bar .nav-list .nav-item a.active {
   background-color: #82bd3f;
 }
-.header .bottom .header-container .row .nav-bar .nav-list .nav-item svg {
+.header .bottom .header-container .rowww .nav-bar .nav-list .nav-item svg {
   width: 15px;
   margin-left: 10px;
 }
-.header .bottom .header-container .row .nav-bar .nav-list .nav-item img {
+.header .bottom .header-container .rowww .nav-bar .nav-list .nav-item img {
   width: 25px;
 }
-.header .bottom .header-container .row .nav-bar .nav-list .nav-item .drop-list {
+.header .bottom .header-container .rowww .nav-bar .nav-list .nav-item .drop-list {
   position: absolute;
   top: 31px;
   left: -10px;
@@ -131,35 +140,36 @@
   visibility: hidden;
   transition: 0.4s ease;
 }
-.header .bottom .header-container .row .nav-bar .nav-list .nav-item .drop-list.isOpen {
+.header .bottom .header-container .rowww .nav-bar .nav-list .nav-item .drop-list.isOpen {
   transform: translateY(0px);
   opacity: 1;
   visibility: visible;
 }
-.header .bottom .header-container .row .nav-bar .nav-list .nav-item .drop-list .drop-item {
+.header .bottom .header-container .rowww .nav-bar .nav-list .nav-item .drop-list .drop-item {
   display: flex;
   align-items: center;
 }
-.header .bottom .header-container .row .nav-bar .nav-list .nav-item .drop-list .drop-item img {
+.header .bottom .header-container .rowww .nav-bar .nav-list .nav-item .drop-list .drop-item img {
   margin-left: 10px;
 }
-.header .bottom .header-container .row .nav-bar .nav-list .nav-item .drop-list .drop-item a {
+.header .bottom .header-container .rowww .nav-bar .nav-list .nav-item .drop-list .drop-item a {
   color: #000;
   padding: 9px 10px;
   word-wrap: none;
   font-size: 16px;
   line-height: 16px;
   width: 138px;
+  text-decoration: none;
 }
-.header .bottom .header-container .row .nav-bar .nav-list .nav-item .language {
+.header .bottom .header-container .rowww .nav-bar .nav-list .nav-item .language {
   left: -106px;
 }
-.header .bottom .header-container .row .mobile-menu {
+.header .bottom .header-container .rowww .mobile-menu {
   display: none;
   padding: 8px;
   cursor: pointer;
 }
-.header .bottom .header-container .row .mobile-menu svg {
+.header .bottom .header-container .rowww .mobile-menu svg {
   width: 24px;
   aspect-ratio: 1/1;
 }
@@ -236,6 +246,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  text-decoration: none;
 }
 .header .side-bar .mobile-body .mobile-list .mobile-item a img {
   width: 25px;
@@ -260,6 +271,9 @@
   height: 72px;
   transform: scaleY(1);
   transform-origin: top center;
+}
+.header .side-bar .mobile-body .mobile-drop-list .mobile-item a {
+  text-decoration: none;
 }
 .header .side-bar .mobile-body .btn {
   color: #fff;
@@ -314,13 +328,13 @@
     height: 64px;
     background-color: #1f4586;
   }
-  .header .bottom .header-container .row .logo {
+  .header .bottom .header-container .rowww .logo {
     display: block;
   }
-  .header .bottom .header-container .row .nav-bar {
+  .header .bottom .header-container .rowww .nav-bar {
     display: none;
   }
-  .header .bottom .header-container .row .mobile-menu {
+  .header .bottom .header-container .rowww .mobile-menu {
     display: block;
   }
 }
@@ -344,22 +358,22 @@
   background-color: #1f4586;
   margin-top: 80px;
 }
-.footer .footer-container .row {
+.footer .footer-container .rowww {
   padding: 15px 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.footer .footer-container .row .logo {
+.footer .footer-container .rowww .logo {
   max-width: 80px;
   width: 100%;
   aspect-ratio: 1/1;
 }
-.footer .footer-container .row .logo img {
+.footer .footer-container .rowww .logo img {
   width: 100%;
 }
-.footer .footer-container .row .end-text {
+.footer .footer-container .rowww .end-text {
   padding-left: 10px;
   font-size: 14px;
   font-weight: 600;
@@ -368,7 +382,7 @@
 }
 
 @media (max-width: 575px) {
-  .footer .footer-container .row {
+  .footer .footer-container .rowww {
     flex-direction: column;
     row-gap: 30px;
     text-align: center;
@@ -378,6 +392,12 @@
 .abstract,
 .sponsor {
   padding-bottom: 25px;
+}
+.abstract .abstract-container,
+.abstract .sponsor-container,
+.sponsor .abstract-container,
+.sponsor .sponsor-container {
+  /* --------------------------------- History -------------------------------- */
 }
 .abstract .abstract-container #abstract-form dl,
 .abstract .abstract-container #abstract-form ol,
@@ -454,7 +474,7 @@
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  gap: 1%;
+  gap: 3%;
 }
 .abstract .abstract-container #abstract-form .info-area label,
 .abstract .abstract-container #abstract-form .info-area .select-label,
@@ -929,6 +949,146 @@
   line-height: 18px;
   color: rgba(33, 37, 41, 0.7411764706);
 }
+.abstract .abstract-container #abstract-form .btn-personal,
+.abstract .abstract-container #sponsor-form .btn-personal,
+.abstract .sponsor-container #abstract-form .btn-personal,
+.abstract .sponsor-container #sponsor-form .btn-personal,
+.sponsor .abstract-container #abstract-form .btn-personal,
+.sponsor .abstract-container #sponsor-form .btn-personal,
+.sponsor .sponsor-container #abstract-form .btn-personal,
+.sponsor .sponsor-container #sponsor-form .btn-personal {
+  width: 100%;
+  text-align: right;
+}
+.abstract .abstract-container #abstract-form .btn-personal .personal-add,
+.abstract .abstract-container #sponsor-form .btn-personal .personal-add,
+.abstract .sponsor-container #abstract-form .btn-personal .personal-add,
+.abstract .sponsor-container #sponsor-form .btn-personal .personal-add,
+.sponsor .abstract-container #abstract-form .btn-personal .personal-add,
+.sponsor .abstract-container #sponsor-form .btn-personal .personal-add,
+.sponsor .sponsor-container #abstract-form .btn-personal .personal-add,
+.sponsor .sponsor-container #sponsor-form .btn-personal .personal-add {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #fff;
+  background-color: #82bd3f;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.abstract .abstract-container #abstract-form .personal-area,
+.abstract .abstract-container #sponsor-form .personal-area,
+.abstract .sponsor-container #abstract-form .personal-area,
+.abstract .sponsor-container #sponsor-form .personal-area,
+.sponsor .abstract-container #abstract-form .personal-area,
+.sponsor .abstract-container #sponsor-form .personal-area,
+.sponsor .sponsor-container #abstract-form .personal-area,
+.sponsor .sponsor-container #sponsor-form .personal-area {
+  width: 100%;
+}
+.abstract .abstract-container #abstract-form .personal-area .rowww,
+.abstract .abstract-container #sponsor-form .personal-area .rowww,
+.abstract .sponsor-container #abstract-form .personal-area .rowww,
+.abstract .sponsor-container #sponsor-form .personal-area .rowww,
+.sponsor .abstract-container #abstract-form .personal-area .rowww,
+.sponsor .abstract-container #sponsor-form .personal-area .rowww,
+.sponsor .sponsor-container #abstract-form .personal-area .rowww,
+.sponsor .sponsor-container #sponsor-form .personal-area .rowww {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  flex-wrap: wrap;
+  row-gap: 25px;
+}
+.abstract .abstract-container #abstract-form .personal-area .rowww .personal-card,
+.abstract .abstract-container #sponsor-form .personal-area .rowww .personal-card,
+.abstract .sponsor-container #abstract-form .personal-area .rowww .personal-card,
+.abstract .sponsor-container #sponsor-form .personal-area .rowww .personal-card,
+.sponsor .abstract-container #abstract-form .personal-area .rowww .personal-card,
+.sponsor .abstract-container #sponsor-form .personal-area .rowww .personal-card,
+.sponsor .sponsor-container #abstract-form .personal-area .rowww .personal-card,
+.sponsor .sponsor-container #sponsor-form .personal-area .rowww .personal-card {
+  width: 48%;
+  border: 1px solid #1f4586;
+  border-radius: 10px;
+}
+.abstract .abstract-container #abstract-form .personal-area .rowww .personal-card .personal-list,
+.abstract .abstract-container #sponsor-form .personal-area .rowww .personal-card .personal-list,
+.abstract .sponsor-container #abstract-form .personal-area .rowww .personal-card .personal-list,
+.abstract .sponsor-container #sponsor-form .personal-area .rowww .personal-card .personal-list,
+.sponsor .abstract-container #abstract-form .personal-area .rowww .personal-card .personal-list,
+.sponsor .abstract-container #sponsor-form .personal-area .rowww .personal-card .personal-list,
+.sponsor .sponsor-container #abstract-form .personal-area .rowww .personal-card .personal-list,
+.sponsor .sponsor-container #sponsor-form .personal-area .rowww .personal-card .personal-list {
+  width: 100%;
+}
+.abstract .abstract-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales,
+.abstract .abstract-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales,
+.abstract .sponsor-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales,
+.abstract .sponsor-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales,
+.sponsor .abstract-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales,
+.sponsor .abstract-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales,
+.sponsor .sponsor-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales,
+.sponsor .sponsor-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+}
+.abstract .abstract-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .title,
+.abstract .abstract-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .title,
+.abstract .sponsor-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .title,
+.abstract .sponsor-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .title,
+.sponsor .abstract-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .title,
+.sponsor .abstract-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .title,
+.sponsor .sponsor-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .title,
+.sponsor .sponsor-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  color: #212529;
+  width: 50%;
+  padding: 0 10px;
+}
+.abstract .abstract-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .text,
+.abstract .abstract-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .text,
+.abstract .sponsor-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .text,
+.abstract .sponsor-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .text,
+.sponsor .abstract-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .text,
+.sponsor .abstract-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .text,
+.sponsor .sponsor-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .text,
+.sponsor .sponsor-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .text {
+  width: 50%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #535b63;
+  padding-right: 10px;
+  word-break: break-all;
+}
+.abstract .abstract-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .delete,
+.abstract .abstract-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .delete,
+.abstract .sponsor-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .delete,
+.abstract .sponsor-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .delete,
+.sponsor .abstract-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .delete,
+.sponsor .abstract-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .delete,
+.sponsor .sponsor-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .delete,
+.sponsor .sponsor-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .delete {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #fff;
+  padding: 5px 28px;
+  background-color: #fc0000;
+  border-radius: 5px;
+  cursor: pointer;
+}
 .abstract .abstract-container #abstract-form .btn-area,
 .abstract .abstract-container #sponsor-form .btn-area,
 .abstract .sponsor-container #abstract-form .btn-area,
@@ -941,6 +1101,7 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  gap: 20px;
 }
 .abstract .abstract-container #abstract-form .btn-area .btn,
 .abstract .abstract-container #sponsor-form .btn-area .btn,
@@ -951,17 +1112,168 @@
 .sponsor .sponsor-container #abstract-form .btn-area .btn,
 .sponsor .sponsor-container #sponsor-form .btn-area .btn {
   color: #fff;
-  font-size: 20px;
-  max-width: 336px;
-  width: 100%;
+  font-size: 16px;
   font-weight: 500;
-  line-height: 30px;
-  padding: 14px;
+  line-height: 22px;
+  padding: 8px 20px;
   cursor: pointer;
   background-color: #82bd3f;
   outline: none;
   border: none;
   border-radius: 5px;
+}
+.abstract .abstract-container .abstract-history,
+.abstract .sponsor-container .abstract-history,
+.sponsor .abstract-container .abstract-history,
+.sponsor .sponsor-container .abstract-history {
+  width: 100%;
+  min-height: 150px;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(40px);
+  transition: 0.3s ease;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+}
+.abstract .abstract-container .abstract-history.active,
+.abstract .sponsor-container .abstract-history.active,
+.sponsor .abstract-container .abstract-history.active,
+.sponsor .sponsor-container .abstract-history.active {
+  position: fixed;
+  opacity: 1;
+  visibility: visible;
+  z-index: 4;
+  transform: translateY(0px);
+}
+.abstract .abstract-container .abstract-history.active .abstract-history-container,
+.abstract .sponsor-container .abstract-history.active .abstract-history-container,
+.sponsor .abstract-container .abstract-history.active .abstract-history-container,
+.sponsor .sponsor-container .abstract-history.active .abstract-history-container {
+  z-index: 9;
+}
+.abstract .abstract-container .abstract-history .abstract-history-container,
+.abstract .sponsor-container .abstract-history .abstract-history-container,
+.sponsor .abstract-container .abstract-history .abstract-history-container,
+.sponsor .sponsor-container .abstract-history .abstract-history-container {
+  border-radius: 10px;
+  background-color: #fff;
+}
+.abstract .abstract-container .abstract-history .abstract-history-container .history-table,
+.abstract .sponsor-container .abstract-history .abstract-history-container .history-table,
+.sponsor .abstract-container .abstract-history .abstract-history-container .history-table,
+.sponsor .sponsor-container .abstract-history .abstract-history-container .history-table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+.abstract .abstract-container .abstract-history .abstract-history-container .history-table .history-title,
+.abstract .sponsor-container .abstract-history .abstract-history-container .history-table .history-title,
+.sponsor .abstract-container .abstract-history .abstract-history-container .history-table .history-title,
+.sponsor .sponsor-container .abstract-history .abstract-history-container .history-table .history-title {
+  padding: 25px 0 30px;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #212529;
+  text-align: left;
+}
+.abstract .abstract-container .abstract-history .abstract-history-container .history-table .table-head tr th,
+.abstract .sponsor-container .abstract-history .abstract-history-container .history-table .table-head tr th,
+.sponsor .abstract-container .abstract-history .abstract-history-container .history-table .table-head tr th,
+.sponsor .sponsor-container .abstract-history .abstract-history-container .history-table .table-head tr th {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  color: #5c545e;
+  padding: 13px 0;
+  text-align: center;
+}
+.abstract .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr:nth-child(odd),
+.abstract .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr:nth-child(odd),
+.sponsor .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr:nth-child(odd),
+.sponsor .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr:nth-child(odd) {
+  background-color: #efefef;
+}
+.abstract .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr td,
+.abstract .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr td,
+.sponsor .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr td,
+.sponsor .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr td {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #5c545e;
+  padding: 6px 0;
+}
+.abstract .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr td .edit-area,
+.abstract .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr td .edit-area,
+.sponsor .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr td .edit-area,
+.sponsor .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr td .edit-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.abstract .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr td .edit-area .edit-icon,
+.abstract .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr td .edit-area .delete-icon,
+.abstract .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr td .edit-area .edit-icon,
+.abstract .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr td .edit-area .delete-icon,
+.sponsor .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr td .edit-area .edit-icon,
+.sponsor .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr td .edit-area .delete-icon,
+.sponsor .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr td .edit-area .edit-icon,
+.sponsor .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr td .edit-area .delete-icon {
+  padding: 2px 4px;
+  display: flex;
+  cursor: pointer;
+}
+.abstract .abstract-container .abstract-history .abstract-history-container .btn-area,
+.abstract .sponsor-container .abstract-history .abstract-history-container .btn-area,
+.sponsor .abstract-container .abstract-history .abstract-history-container .btn-area,
+.sponsor .sponsor-container .abstract-history .abstract-history-container .btn-area {
+  width: 100%;
+  text-align: right;
+  margin-top: 30px;
+}
+.abstract .abstract-container .abstract-history .abstract-history-container .btn-area span,
+.abstract .sponsor-container .abstract-history .abstract-history-container .btn-area span,
+.sponsor .abstract-container .abstract-history .abstract-history-container .btn-area span,
+.sponsor .sponsor-container .abstract-history .abstract-history-container .btn-area span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  display: inline-block;
+  padding: 10px 41px;
+  color: #fff;
+  background-color: #82bd3f;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+.abstract .abstract-container .abstract-history .history-overlay,
+.abstract .sponsor-container .abstract-history .history-overlay,
+.sponsor .abstract-container .abstract-history .history-overlay,
+.sponsor .sponsor-container .abstract-history .history-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background-color: transparent;
+  display: none;
+}
+.abstract .abstract-container .abstract-history .history-overlay.isOpen,
+.abstract .sponsor-container .abstract-history .history-overlay.isOpen,
+.sponsor .abstract-container .abstract-history .history-overlay.isOpen,
+.sponsor .sponsor-container .abstract-history .history-overlay.isOpen {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.1450980392);
 }
 .abstract .overlay,
 .sponsor .overlay {
@@ -978,7 +1290,13 @@
 .sponsor .overlay.isOpen {
   display: block;
 }
+.abstract .overlay.isHistoryOpen,
+.sponsor .overlay.isHistoryOpen {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.1450980392);
+}
 
+/* --------------------------------- Sponsor -------------------------------- */
 .sponsor-logo .sponsor-container .logo-title {
   font-size: 32px;
   font-weight: 700;
@@ -1013,6 +1331,35 @@
      object-fit: cover;
 }
 
+@media (max-width: 750px) {
+  .abstract .abstract-container,
+  .abstract .sponsor-container,
+  .sponsor .abstract-container,
+  .sponsor .sponsor-container {
+    /* --------------------------------- History -------------------------------- */
+  }
+  .abstract .abstract-container #abstract-form .btn-area,
+  .abstract .abstract-container #sponsor-form .btn-area,
+  .abstract .sponsor-container #abstract-form .btn-area,
+  .abstract .sponsor-container #sponsor-form .btn-area,
+  .sponsor .abstract-container #abstract-form .btn-area,
+  .sponsor .abstract-container #sponsor-form .btn-area,
+  .sponsor .sponsor-container #abstract-form .btn-area,
+  .sponsor .sponsor-container #sponsor-form .btn-area {
+    gap: 15px;
+    flex-direction: column;
+  }
+  .abstract .abstract-container #abstract-form .btn-area .btn,
+  .abstract .abstract-container #sponsor-form .btn-area .btn,
+  .abstract .sponsor-container #abstract-form .btn-area .btn,
+  .abstract .sponsor-container #sponsor-form .btn-area .btn,
+  .sponsor .abstract-container #abstract-form .btn-area .btn,
+  .sponsor .abstract-container #sponsor-form .btn-area .btn,
+  .sponsor .sponsor-container #abstract-form .btn-area .btn,
+  .sponsor .sponsor-container #sponsor-form .btn-area .btn {
+    text-align: center;
+  }
+}
 @media (max-width: 700px) {
   .abstract .abstract-container #abstract-form .info-area,
   .abstract .abstract-container #sponsor-form .info-area,
@@ -1032,7 +1379,7 @@
   .sponsor .abstract-container #sponsor-form .info-area .form-group,
   .sponsor .sponsor-container #abstract-form .info-area .form-group,
   .sponsor .sponsor-container #sponsor-form .info-area .form-group {
-    max-width: 263px;
+    max-width: 48%;
   }
   .abstract .abstract-container #abstract-form .info-area .form-group-img input,
   .abstract .abstract-container #sponsor-form .info-area .form-group-img input,
@@ -1119,11 +1466,100 @@
     line-height: 18px;
     color: rgba(33, 37, 41, 0.7411764706);
   }
+  .abstract .abstract-container #abstract-form .personal-area .rowww .personal-card,
+  .abstract .abstract-container #sponsor-form .personal-area .rowww .personal-card,
+  .abstract .sponsor-container #abstract-form .personal-area .rowww .personal-card,
+  .abstract .sponsor-container #sponsor-form .personal-area .rowww .personal-card,
+  .sponsor .abstract-container #abstract-form .personal-area .rowww .personal-card,
+  .sponsor .abstract-container #sponsor-form .personal-area .rowww .personal-card,
+  .sponsor .sponsor-container #abstract-form .personal-area .rowww .personal-card,
+  .sponsor .sponsor-container #sponsor-form .personal-area .rowww .personal-card {
+    width: 100%;
+  }
+  .abstract .abstract-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .title,
+  .abstract .abstract-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .title,
+  .abstract .sponsor-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .title,
+  .abstract .sponsor-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .title,
+  .sponsor .abstract-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .title,
+  .sponsor .abstract-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .title,
+  .sponsor .sponsor-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .title,
+  .sponsor .sponsor-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .title {
+    width: 40%;
+  }
+  .abstract .abstract-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .text,
+  .abstract .abstract-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .text,
+  .abstract .sponsor-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .text,
+  .abstract .sponsor-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .text,
+  .sponsor .abstract-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .text,
+  .sponsor .abstract-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .text,
+  .sponsor .sponsor-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .text,
+  .sponsor .sponsor-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .text {
+    width: 60%;
+  }
+  .abstract .abstract-container .abstract-history .abstract-history-container .history-table,
+  .abstract .sponsor-container .abstract-history .abstract-history-container .history-table,
+  .sponsor .abstract-container .abstract-history .abstract-history-container .history-table,
+  .sponsor .sponsor-container .abstract-history .abstract-history-container .history-table {
+    border: 0;
+  }
+  .abstract .abstract-container .abstract-history .abstract-history-container .history-table .history-title,
+  .abstract .sponsor-container .abstract-history .abstract-history-container .history-table .history-title,
+  .sponsor .abstract-container .abstract-history .abstract-history-container .history-table .history-title,
+  .sponsor .sponsor-container .abstract-history .abstract-history-container .history-table .history-title {
+    padding: 15px 0;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .abstract .abstract-container .abstract-history .abstract-history-container .history-table .table-head,
+  .abstract .sponsor-container .abstract-history .abstract-history-container .history-table .table-head,
+  .sponsor .abstract-container .abstract-history .abstract-history-container .history-table .table-head,
+  .sponsor .sponsor-container .abstract-history .abstract-history-container .history-table .table-head {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  .abstract .abstract-container .abstract-history .abstract-history-container .history-table .table-head tr,
+  .abstract .sponsor-container .abstract-history .abstract-history-container .history-table .table-head tr,
+  .sponsor .abstract-container .abstract-history .abstract-history-container .history-table .table-head tr,
+  .sponsor .sponsor-container .abstract-history .abstract-history-container .history-table .table-head tr {
+    display: block;
+  }
+  .abstract .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr,
+  .abstract .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr,
+  .sponsor .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr,
+  .sponsor .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr {
+    display: block;
+  }
+  .abstract .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr td,
+  .abstract .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr td,
+  .sponsor .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr td,
+  .sponsor .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr td {
+    padding: 12px 0;
+    display: block;
+    text-align: center;
+    word-break: break-all;
+  }
+  .abstract .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr td::before,
+  .abstract .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr td::before,
+  .sponsor .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr td::before,
+  .sponsor .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr td::before {
+    content: attr(data-label);
+    float: left;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    width: 101px;
+    clear: both;
+    margin: 0 5px;
+    text-align: left;
+  }
   .sponsor-logo .sponsor-container .logo-area .logo-card {
     width: 47%;
-  }
-  .sponsor .sponsor-container #sponsor-form .info-area .form-group {
-    max-width: 250px;
   }
 }
 @media (max-width: 575px) {
@@ -1308,6 +1744,7 @@
   .sponsor .sponsor-container #abstract-form .btn-area .btn,
   .sponsor .sponsor-container #sponsor-form .btn-area .btn {
     max-width: 100%;
+    font-size: 12px;
   }
   .sponsor-logo .sponsor-container .logo-title {
     font-size: 22px;
@@ -1321,13 +1758,65 @@
     width: 100%;
   }
 }
+@media screen and (max-width: 350px) {
+  .abstract .abstract-container #abstract-form .personal-area .rowww .personal-card,
+  .abstract .abstract-container #sponsor-form .personal-area .rowww .personal-card,
+  .abstract .sponsor-container #abstract-form .personal-area .rowww .personal-card,
+  .abstract .sponsor-container #sponsor-form .personal-area .rowww .personal-card,
+  .sponsor .abstract-container #abstract-form .personal-area .rowww .personal-card,
+  .sponsor .abstract-container #sponsor-form .personal-area .rowww .personal-card,
+  .sponsor .sponsor-container #abstract-form .personal-area .rowww .personal-card,
+  .sponsor .sponsor-container #sponsor-form .personal-area .rowww .personal-card {
+    width: 100%;
+  }
+  .abstract .abstract-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .title,
+  .abstract .abstract-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .title,
+  .abstract .sponsor-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .title,
+  .abstract .sponsor-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .title,
+  .sponsor .abstract-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .title,
+  .sponsor .abstract-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .title,
+  .sponsor .sponsor-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .title,
+  .sponsor .sponsor-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .title {
+    width: 50%;
+  }
+  .abstract .abstract-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .text,
+  .abstract .abstract-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .text,
+  .abstract .sponsor-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .text,
+  .abstract .sponsor-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .text,
+  .sponsor .abstract-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .text,
+  .sponsor .abstract-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .text,
+  .sponsor .sponsor-container #abstract-form .personal-area .rowww .personal-card .personal-list .personales .text,
+  .sponsor .sponsor-container #sponsor-form .personal-area .rowww .personal-card .personal-list .personales .text {
+    width: 50%;
+  }
+  .abstract .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr td,
+  .abstract .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr td,
+  .sponsor .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr td,
+  .sponsor .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr td {
+    text-align: right;
+    margin-right: 5px;
+    height: 40px;
+  }
+  .abstract .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr td .edit-area,
+  .abstract .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr td .edit-area,
+  .sponsor .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr td .edit-area,
+  .sponsor .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr td .edit-area {
+    justify-content: flex-end;
+  }
+  .abstract .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr td::before,
+  .abstract .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr td::before,
+  .sponsor .abstract-container .abstract-history .abstract-history-container .history-table .table-body tr td::before,
+  .sponsor .sponsor-container .abstract-history .abstract-history-container .history-table .table-body tr td::before {
+    width: auto;
+  }
+}
 .log-in-out {
   width: 100%;
   min-height: 85vh;
   height: 100%;
   margin: 10px 0;
 }
-.log-in-out .row {
+.log-in-out .rowww {
   width: 100%;
   min-height: 85vh;
   height: 100%;
@@ -1782,36 +2271,36 @@
   font-weight: 600;
   line-height: 24px;
 }
-.contact .contact-container .row {
+.contact .contact-container .rowww {
   width: 100%;
   display: flex;
   gap: 4%;
   padding: 120px 0;
 }
-.contact .contact-container .row .contact-card {
+.contact .contact-container .rowww .contact-card {
   width: 31%;
   text-align: center;
 }
-.contact .contact-container .row .contact-card .top {
+.contact .contact-container .rowww .contact-card .top {
   max-width: 114px;
   width: 100%;
   aspect-ratio: 1/1;
   margin: 0 auto;
 }
-.contact .contact-container .row .contact-card .top img {
+.contact .contact-container .rowww .contact-card .top img {
   width: 100%;
 }
-.contact .contact-container .row .contact-card .bottom {
+.contact .contact-container .rowww .contact-card .bottom {
   padding-top: 17px;
 }
-.contact .contact-container .row .contact-card .bottom .link-list .link-item {
+.contact .contact-container .rowww .contact-card .bottom .link-list .link-item {
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
   word-wrap: break-word;
   color: #001d48;
 }
-.contact .contact-container .row .contact-card .bottom .link-list .link-item a {
+.contact .contact-container .rowww .contact-card .bottom .link-list .link-item a {
   color: inherit;
   text-decoration: underline;
 }
@@ -1824,13 +2313,134 @@
     font-size: 18px;
     line-height: 18px;
   }
-  .contact .contact-container .row {
+  .contact .contact-container .rowww {
     align-items: center;
     flex-direction: column;
     row-gap: 15px;
     padding: 22px 0;
   }
-  .contact .contact-container .row .contact-card {
+  .contact .contact-container .rowww .contact-card {
     width: 100%;
+  }
+}
+.abstract-hostory {
+  width: 100%;
+  min-height: 70vh;
+}
+.abstract-hostory .abstract-history-container .history-table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+.abstract-hostory .abstract-history-container .history-table .history-title {
+  padding: 25px 0 30px;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #212529;
+  text-align: left;
+}
+.abstract-hostory .abstract-history-container .history-table .table-head tr th {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  color: #5c545e;
+  padding: 13px 0;
+  text-align: center;
+}
+.abstract-hostory .abstract-history-container .history-table .table-body tr:nth-child(odd) {
+  background-color: #efefef;
+}
+.abstract-hostory .abstract-history-container .history-table .table-body tr td {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #5c545e;
+  padding: 6px 0;
+}
+.abstract-hostory .abstract-history-container .history-table .table-body tr td .edit-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.abstract-hostory .abstract-history-container .history-table .table-body tr td .edit-area .edit-icon,
+.abstract-hostory .abstract-history-container .history-table .table-body tr td .edit-area .delete-icon {
+  padding: 2px 4px;
+  display: flex;
+  cursor: pointer;
+}
+.abstract-hostory .abstract-history-container .btn-area {
+  width: 100%;
+  text-align: right;
+  margin-top: 30px;
+}
+.abstract-hostory .abstract-history-container .btn-area span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  display: inline-block;
+  padding: 10px 41px;
+  color: #fff;
+  background-color: #82bd3f;
+  border-radius: 5px;
+}
+
+/* ------------------------------- Responsive ------------------------------- */
+@media screen and (max-width: 700px) {
+  .abstract-hostory .abstract-history-container .history-table {
+    border: 0;
+  }
+  .abstract-hostory .abstract-history-container .history-table .history-title {
+    padding: 15px 0;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .abstract-hostory .abstract-history-container .history-table .table-head {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  .abstract-hostory .abstract-history-container .history-table .table-head tr {
+    display: block;
+  }
+  .abstract-hostory .abstract-history-container .history-table .table-body tr {
+    display: block;
+  }
+  .abstract-hostory .abstract-history-container .history-table .table-body tr td {
+    padding: 12px 0;
+    display: block;
+    text-align: center;
+    word-break: break-all;
+  }
+  .abstract-hostory .abstract-history-container .history-table .table-body tr td::before {
+    content: attr(data-label);
+    float: left;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    width: 101px;
+    clear: both;
+    margin: 0 5px;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 350px) {
+  .abstract-hostory .abstract-history-container .history-table .table-body tr td {
+    text-align: right;
+    margin-right: 5px;
+    height: 40px;
+  }
+  .abstract-hostory .abstract-history-container .history-table .table-body tr td .edit-area {
+    justify-content: flex-end;
+  }
+  .abstract-hostory .abstract-history-container .history-table .table-body tr td::before {
+    width: auto;
   }
 }/*# sourceMappingURL=main.css.map */

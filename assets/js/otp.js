@@ -62,6 +62,15 @@ sendOtp.addEventListener("click", () => {
   secondSpan.innerHTML = 59;
   stopInteval();
   startInterval();
+  axios;
+  let repeat = {
+    repeatCode,
+  }
+    .post("", repeat)
+    .then((res) => {
+      return true;
+    })
+    .catch((err) => console.log(err.message));
 });
 
 /* --------------------------------- Get Dom -------------------------------- */
